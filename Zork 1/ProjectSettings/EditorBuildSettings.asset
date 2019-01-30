@@ -5,7 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    guid: c26159b600f588945848849e59c0d14b
+  - enabled: 1
+    path: Assets/Scenes/SampleScene2.unity
+    guid: 9aba5f2f2490bd24c91b0c02a2c85ec2
+  - enabled: 1
+    path: Assets/Scenes/OutsideHouse.unity
+    guid: 99457eff9d2ddaf4299e71fc99f974df
+  - enabled: 1
+    path: Assets/Scenes/HouseGroundFloor.unity
+    guid: e3b680f76bc912249bce805b5930c0aa
+  - enabled: 1
+    path: Assets/Scenes/HouseAttic.unity
+    guid: 50744863002c1d843a541b99b6c67550
+  - enabled: 1
+    path: Assets/Scenes/Cellar.unity
+    guid: 17d07259820f55c4da3a49deed9c2eaf
   m_configObjects: {}
