@@ -113,6 +113,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45f1453c7947f004993d9399244806d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slotPrefab: {fileID: 7977664214629570931, guid: 62f84c1ebd79f9f40b8f6a474751109a,
+    type: 3}
 --- !u!114 &5054915319444381672
 MonoBehaviour:
   m_ObjectHideFlags: 0
