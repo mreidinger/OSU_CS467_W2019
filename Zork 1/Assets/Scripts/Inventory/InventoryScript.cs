@@ -24,11 +24,21 @@ public class InventoryScript : MonoBehaviour
     //debugging purposes
     [SerializeField]
     private Item[] items;
-    private void Awake()
+    /*private void Awake()
     {
         Bag bag = (Bag)Instantiate(items[0]);
         bag.Initialize(16);
         bag.Use();
+    }*/
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Slash))
+        {
+            Bag bag = (Bag)Instantiate(items[0]);
+            bag.Initialize(16);
+            bag.Use();
+        }
     }
     //end debuggging
 
@@ -42,17 +52,5 @@ public class InventoryScript : MonoBehaviour
                 break;
             }
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
