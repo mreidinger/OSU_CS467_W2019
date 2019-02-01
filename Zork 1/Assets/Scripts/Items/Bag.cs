@@ -21,9 +21,11 @@ public class Bag : Item, IUseable
         this.slots = slots;
     }
 
+    //equips the current bag.
     public void Use()
     {
         MyBagScript = Instantiate(bagPrefab, InventoryScript.MyInstance.transform).GetComponent<BagScript>(); //creates bag prefab under the inventory, also loads the associateed script.
         MyBagScript.AddSlots(slots);
+        InventoryScript.MyInstance.AddBag(this);
     }
 }
