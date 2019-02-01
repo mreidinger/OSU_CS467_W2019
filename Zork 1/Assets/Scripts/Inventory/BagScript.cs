@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class BagScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private GameObject slotPrefab;
 
-    // Update is called once per frame
-    void Update()
+    public void AddSlots(int slotCount)
     {
-        
+        for (int i = 0; i < slotCount; i++)
+        {
+            Instantiate(slotPrefab, transform); //slotprefab child of current bagscipt's transform
+        }
     }
 }
