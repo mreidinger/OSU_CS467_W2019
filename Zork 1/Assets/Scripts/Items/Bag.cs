@@ -8,6 +8,8 @@ public class Bag : Item, IUseable
 {
     private int slots; //slots in a bag
 
+    private bool clicked;
+
     [SerializeField]
     private GameObject bagPrefab; //access the prefab
 
@@ -16,16 +18,23 @@ public class Bag : Item, IUseable
 
     public Sprite MyIcon => throw new System.NotImplementedException();
 
+    public bool Clicked { get => clicked; set => clicked = value; }
+
     public void Initialize(int slots)
     {
         this.slots = slots;
+        //clicked = false;
     }
 
     //equips the current bag.
     public void Use()
     {
-        MyBagScript = Instantiate(bagPrefab, InventoryScript.MyInstance.transform).GetComponent<BagScript>(); //creates bag prefab under the inventory, also loads the associateed script.
-        MyBagScript.AddSlots(slots);
-        InventoryScript.MyInstance.AddBag(this);
+        if (InventoryScript.MyInstance.CanAddBag)
+        {
+            Remove();
+            MyBagScript = Instantiate(bagPrefab, InventoryScript.MyInstance.transform).GetComponent<BagScript>(); //creates bag prefab under the inventory, also loads the associateed script.
+            MyBagScript.AddSlots(slots);
+            InventoryScript.MyInstance.AddBag(this);
+        }
     }
 }

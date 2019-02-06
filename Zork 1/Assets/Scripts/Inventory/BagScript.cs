@@ -7,11 +7,44 @@ public class BagScript : MonoBehaviour
     [SerializeField]
     private GameObject slotPrefab;
 
+    private CanvasGroup canvasGroup; //used to hide/show ui
+
+    private List<SlotScript> slots = new List<SlotScript>();
+
+
+    private void Awake()
+    {
+        canvasGroup = GetComponent<CanvasGroup>();
+    }
+
+    //makes slots for bag
     public void AddSlots(int slotCount)
     {
         for (int i = 0; i < slotCount; i++)
         {
-            Instantiate(slotPrefab, transform); //slotprefab child of current bagscipt's transform
+            SlotScript slot = Instantiate(slotPrefab, transform).GetComponent<SlotScript>(); //slotprefab child of current bagscipt's transform
+            slots.Add(slot);
         }
+    }
+
+    public bool AddItem(Item item)
+    {
+        //look for an empty slot and put item
+        foreach(SlotScript slot in slots)
+        {
+            if (slot.IsEmpty)
+            {
+                slot.AddItem(item);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void OpenClose(Bag bag)
+    {
+        canvasGroup.alpha = canvasGroup.alpha > 0 ? 0 : 1; //shown: 1, hidden: 0
+        canvasGroup.blocksRaycasts = canvasGroup.blocksRaycasts == true ? false : true; //similar logic
+        bag.Clicked = bag.Clicked == true ? false : true;
     }
 }

@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class BagButton : MonoBehaviour
+public class BagButton : MonoBehaviour, IPointerClickHandler
 {
     private Bag bag;
 
@@ -13,15 +14,23 @@ public class BagButton : MonoBehaviour
         get => bag;
         set
         {
-            if (value != null)
+            bag = value;
+        }
+    }
+    //click to open and close inventory
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (bag != null)
+        {
+            if (bag.Clicked)
             {
                 GetComponent<Image>().sprite = full;
             }
-            else
+            else if (bag.Clicked == false)
             {
                 GetComponent<Image>().sprite = empty;
             }
-            bag = value;
+            bag.MyBagScript.OpenClose(bag);
         }
     }
 }
