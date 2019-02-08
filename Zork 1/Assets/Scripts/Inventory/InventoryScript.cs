@@ -25,8 +25,7 @@ public class InventoryScript : MonoBehaviour
     private BagButton[] bagButtons;
 
     //debugging purposes
-    [SerializeField]
-    private Item[] items;
+    public Item[] items;
 
     public bool CanAddBag
     {
@@ -45,12 +44,16 @@ public class InventoryScript : MonoBehaviour
     //debug
     private void Update()
     {
-        /*if (Input.GetKeyDown(KeyCode.Slash))
+        if (Input.GetKeyDown(KeyCode.L))
         {
+            //could I call this on collision?
+            /*
             Bag bag = (Bag)Instantiate(items[0]);
             bag.Initialize(16);
-            bag.Use();
-        }*/
+            bag.Use();*/
+            Leaflet leaflet = (Leaflet)Instantiate(items[1]);
+            AddItem(leaflet);
+        }
         if (Input.GetKeyDown(KeyCode.K))
         {
             Bag bag = (Bag)Instantiate(items[0]);

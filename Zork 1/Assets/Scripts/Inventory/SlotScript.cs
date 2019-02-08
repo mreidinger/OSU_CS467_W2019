@@ -6,6 +6,24 @@ using UnityEngine.UI;
 
 public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
 {
+    //maybe not needed
+    /*
+    private static SlotScript instance;
+
+    public static SlotScript MyInstance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<SlotScript>();
+            }
+
+            return instance;
+        }
+    }
+    */
+
     private Stack<Item> items = new Stack<Item>();
     [SerializeField]
     private Image icon;
@@ -63,6 +81,7 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
     //since it is in our slot script, it has a click function
     public void OnPointerClick(PointerEventData eventData)
     {
+        //inventory script slots call this.
         if (eventData.button == PointerEventData.InputButton.Right)
         {
             UseItem();
