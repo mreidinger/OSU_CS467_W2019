@@ -26,4 +26,40 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cellar.unity
     guid: 17d07259820f55c4da3a49deed9c2eaf
+  - enabled: 1
+    path: Assets/Scenes/Forest_1.unity
+    guid: e29e6c372ac8ef641805ab153c56b07d
+  - enabled: 1
+    path: Assets/Scenes/ForestPath.unity
+    guid: bad907fff0100e54b93f5917631c9117
+  - enabled: 1
+    path: Assets/Scenes/ClearingN.unity
+    guid: 1096c19175a0de64aa8ad34adfe0604e
+  - enabled: 1
+    path: Assets/Scenes/UpATree.unity
+    guid: 0ce43c1eaed761b418dca9addd73389e
+  - enabled: 1
+    path: Assets/Scenes/Forest2.unity
+    guid: 86668cb9aa7f1274797e49640e1787df
+  - enabled: 1
+    path: Assets/Scenes/Forest4.unity
+    guid: ed4b91c3be5bfab4bbfc9a359d80b29c
+  - enabled: 1
+    path: Assets/Scenes/ClearingS.unity
+    guid: 3b5ebba02c9232342817583436e40b49
+  - enabled: 1
+    path: Assets/Scenes/Forest3.unity
+    guid: 1defb7776a3c9664fb8aee50eda220cc
+  - enabled: 1
+    path: Assets/Scenes/CanyonView.unity
+    guid: 4c7056e382cfb13498d9277715c8a695
+  - enabled: 1
+    path: Assets/Scenes/RockyLedge.unity
+    guid: 55377b7eff735b748b161ed5635a00b9
+  - enabled: 1
+    path: Assets/Scenes/CanyonBottom.unity
+    guid: 466ad4027cb9ecc44b0b77e9e160410b
+  - enabled: 1
+    path: Assets/Scenes/EndOfRainbow.unity
+    guid: 5d8a23f122459b34b848a2c01f0983d5
   m_configObjects: {}
