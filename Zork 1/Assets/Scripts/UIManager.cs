@@ -4,13 +4,30 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    /*// Start is called before the first frame update
+    //creates singleton for reuse, want to access from 
+    //other places
+    private static UIManager instance;
+
+    public static UIManager MyInstance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<UIManager>();
+            }
+
+            return instance;
+        }
+    }
+
+    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    /*// Update is called once per frame
     void Update()
     {
         

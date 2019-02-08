@@ -29,7 +29,7 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
             return null;
         }
     }
-
+    //Iclickable interface
     public Image MyIcon
     {
         get => icon;
@@ -40,7 +40,7 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
     {
         get => items.Count;
     }
-
+    //end interface
     public bool AddItem(Item item)
     {
         items.Push(item);
@@ -49,7 +49,7 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
         item.MySlot = this;
         return true;
     }
-
+    //popping bag, not slot?
     public void RemoveItem(Item toRemove)
     {
         if(!IsEmpty)
@@ -67,6 +67,10 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
         {
             UseItem();
         }
+        /*else if (eventData.button == PointerEventData.InputButton.Left)
+        {
+           RemoveItem();
+        }*/
     }
 
     public void UseItem()

@@ -45,16 +45,16 @@ public class InventoryScript : MonoBehaviour
     //debug
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Slash))
+        /*if (Input.GetKeyDown(KeyCode.Slash))
         {
             Bag bag = (Bag)Instantiate(items[0]);
             bag.Initialize(16);
             bag.Use();
-        }
+        }*/
         if (Input.GetKeyDown(KeyCode.K))
         {
             Bag bag = (Bag)Instantiate(items[0]);
-            print(bag);
+            //print(bag);
             bag.Initialize(16);
             AddItem(bag);
         }
