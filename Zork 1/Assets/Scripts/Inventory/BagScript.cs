@@ -5,7 +5,7 @@ using UnityEngine;
 public class BagScript : MonoBehaviour
 {
     //maybe not needed
-    /*
+    
     private static BagScript instance;
 
     public static BagScript MyInstance
@@ -20,7 +20,7 @@ public class BagScript : MonoBehaviour
             return instance;
         }
     }
-    */
+    
 
 
     [SerializeField]

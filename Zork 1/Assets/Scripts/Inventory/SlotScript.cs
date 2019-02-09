@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
 {
     //maybe not needed
-    /*
+    
     private static SlotScript instance;
 
     public static SlotScript MyInstance
@@ -22,7 +22,7 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
             return instance;
         }
     }
-    */
+    
 
     private Stack<Item> items = new Stack<Item>();
     [SerializeField]

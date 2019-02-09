@@ -18,7 +18,7 @@ public class InventoryScript : MonoBehaviour
             return instance;
         }
     }
-
+    [SerializeField]
     private List<Bag> bags = new List<Bag>();
 
     [SerializeField]
@@ -29,7 +29,7 @@ public class InventoryScript : MonoBehaviour
 
     public bool CanAddBag
     {
-        get { return bags.Count < 2; }
+        get { return bags.Count < 1; }
     }
 
     private void Awake()
