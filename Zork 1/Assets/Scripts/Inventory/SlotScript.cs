@@ -6,6 +6,24 @@ using UnityEngine.UI;
 
 public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
 {
+    //maybe not needed
+    
+    private static SlotScript instance;
+
+    public static SlotScript MyInstance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<SlotScript>();
+            }
+
+            return instance;
+        }
+    }
+    
+
     private Stack<Item> items = new Stack<Item>();
     [SerializeField]
     private Image icon;
@@ -29,7 +47,7 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
             return null;
         }
     }
-
+    //Iclickable interface
     public Image MyIcon
     {
         get => icon;
@@ -40,7 +58,7 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
     {
         get => items.Count;
     }
-
+    //end interface
     public bool AddItem(Item item)
     {
         items.Push(item);
@@ -49,7 +67,7 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
         item.MySlot = this;
         return true;
     }
-
+    //popping bag, not slot?
     public void RemoveItem(Item toRemove)
     {
         if(!IsEmpty)
@@ -63,10 +81,15 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
     //since it is in our slot script, it has a click function
     public void OnPointerClick(PointerEventData eventData)
     {
+        //inventory script slots call this.
         if (eventData.button == PointerEventData.InputButton.Right)
         {
             UseItem();
         }
+        /*else if (eventData.button == PointerEventData.InputButton.Left)
+        {
+           RemoveItem();
+        }*/
     }
 
     public void UseItem()

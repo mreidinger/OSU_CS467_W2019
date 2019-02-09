@@ -18,19 +18,18 @@ public class InventoryScript : MonoBehaviour
             return instance;
         }
     }
-
+    [SerializeField]
     private List<Bag> bags = new List<Bag>();
 
     [SerializeField]
     private BagButton[] bagButtons;
 
     //debugging purposes
-    [SerializeField]
-    private Item[] items;
+    public Item[] items;
 
     public bool CanAddBag
     {
-        get { return bags.Count < 2; }
+        get { return bags.Count < 1; }
     }
 
     private void Awake()
@@ -45,16 +44,20 @@ public class InventoryScript : MonoBehaviour
     //debug
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Slash))
+        if (Input.GetKeyDown(KeyCode.L))
         {
+            //could I call this on collision?
+            /*
             Bag bag = (Bag)Instantiate(items[0]);
             bag.Initialize(16);
-            bag.Use();
+            bag.Use();*/
+            Leaflet leaflet = (Leaflet)Instantiate(items[1]);
+            AddItem(leaflet);
         }
         if (Input.GetKeyDown(KeyCode.K))
         {
             Bag bag = (Bag)Instantiate(items[0]);
-            print(bag);
+            //print(bag);
             bag.Initialize(16);
             AddItem(bag);
         }

@@ -4,6 +4,23 @@ using UnityEngine.UI;
 
 public class BagButton : MonoBehaviour, IPointerClickHandler
 {
+    /*
+    private static BagButton instance;
+
+    public static BagButton MyInstance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<BagButton>();
+            }
+
+            return instance;
+        }
+    }
+    */
+
     private Bag bag;
 
     [SerializeField]
