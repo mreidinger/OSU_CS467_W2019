@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
 	public Text displayText;
 	public InputAction[] inputActions;
 	public GameObject dialogBox;
+	public InputField textInput;
 	public int dialogueToggle = 0;
 
 	//[HideInInspector]
@@ -29,6 +30,7 @@ public class GameController : MonoBehaviour
 	{
 	//	DisplayRoomText();
 		DisplayLoggedText();
+		textInput.Select();
 	}
 
 	public void DisplayLoggedText()
