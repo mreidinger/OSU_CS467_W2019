@@ -66,8 +66,8 @@ MonoBehaviour:
   m_ChildAlignment: 2
   m_StartCorner: 3
   m_StartAxis: 0
-  m_CellSize: {x: 115, y: 115}
-  m_Spacing: {x: 1.5, y: 1.5}
+  m_CellSize: {x: 220, y: 220}
+  m_Spacing: {x: 3, y: 3}
   m_Constraint: 1
   m_ConstraintCount: 2
 --- !u!114 &7463166713289787265
@@ -82,4 +82,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcfcc8c694db87d4c84d5a03f857e192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bags: []
+  bagButtons: []
   items: []
