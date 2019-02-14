@@ -14,9 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene2.unity
     guid: 9aba5f2f2490bd24c91b0c02a2c85ec2
-  - enabled: 1
-    path: Assets/Scenes/OutsideHouse_Inventory_scene.unity
-    guid: 775990b4b3aac6841b0b851cf26f529d
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/OutsideHouse.unity
     guid: 99457eff9d2ddaf4299e71fc99f974df
@@ -65,4 +65,40 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndOfRainbow.unity
     guid: 5d8a23f122459b34b848a2c01f0983d5
+  - enabled: 1
+    path: Assets/Scenes/TrollRoom.unity
+    guid: 6bbfdb205e784c7409c9faf6e4f3b732
+  - enabled: 1
+    path: Assets/Scenes/EastofChasm.unity
+    guid: 8f3c842c0c3c9c14a8abea0cbb0408d8
+  - enabled: 1
+    path: Assets/Scenes/Gallery.unity
+    guid: e58d764b70b2f5f43ba5827870c017d7
+  - enabled: 1
+    path: Assets/Scenes/Studio.unity
+    guid: 5c559ad6f21a3014d9dcd23594ca60d1
+  - enabled: 1
+    path: Assets/Scenes/EastWestPassage.unity
+    guid: d34d4c0764899144aa277a0c3197391a
+  - enabled: 1
+    path: Assets/Scenes/RoundRoom.unity
+    guid: 18f6ec3d531836d44825a8537e509ab8
+  - enabled: 1
+    path: Assets/Scenes/NarrowPassage.unity
+    guid: fc78f30ac7817e34c92f5a519ddb16bd
+  - enabled: 1
+    path: Assets/Scenes/MirrorRoomS.unity
+    guid: 8408e50a3593ef0478d956a75e277acb
+  - enabled: 1
+    path: Assets/Scenes/WindingPassage.unity
+    guid: 4e51c6457e8fe23459211270a027d820
+  - enabled: 1
+    path: Assets/Scenes/Cave.unity
+    guid: 6c2e69d83653b1f4fa134b70e6a2f2c2
+  - enabled: 1
+    path: Assets/Scenes/EntranceToHades.unity
+    guid: 493d9ffb07667d54c9d85afe896e4d09
+  - enabled: 1
+    path: Assets/Scenes/LandOfTheDead.unity
+    guid: 93040f46054df524e89bfe345419dedf
   m_configObjects: {}
