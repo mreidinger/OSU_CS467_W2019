@@ -2045,6 +2045,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 970952005499345452, guid: d01fc82745f93c746830a6794c9362ae,
+        type: 3}
+      propertyPath: areaToLoad
+      value: OnTheRainbow
+      objectReference: {fileID: 0}
+    - target: {fileID: 970952005499345452, guid: d01fc82745f93c746830a6794c9362ae,
+        type: 3}
+      propertyPath: areaTransitinName
+      value: EndOfRainbow -E
+      objectReference: {fileID: 0}
     - target: {fileID: 1282560636, guid: d01fc82745f93c746830a6794c9362ae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.99
@@ -2052,6 +2062,10 @@ PrefabInstance:
     - target: {fileID: 1282560636, guid: d01fc82745f93c746830a6794c9362ae, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 1282560635, guid: d01fc82745f93c746830a6794c9362ae, type: 3}
+      propertyPath: transitionName
+      value: OnTheRainbow - W
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d01fc82745f93c746830a6794c9362ae, type: 3}
