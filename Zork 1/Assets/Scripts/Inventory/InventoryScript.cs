@@ -24,7 +24,7 @@ public class InventoryScript : MonoBehaviour
     [SerializeField]
     private BagButton[] bagButtons;
 
-    //debugging purposes
+    //debugging purposes. Contains items we will use to make copies of
     public Item[] items;
 
     public bool CanAddBag
@@ -51,6 +51,10 @@ public class InventoryScript : MonoBehaviour
             Bag bag = (Bag)Instantiate(items[0]);
             bag.Initialize(16);
             bag.Use();*/
+            //instantiate uses the specified array to make a copy
+            //of the object specified.
+            //scene view shows weve stored a leaflet item at pos
+            //1 and are making a copy to the leaflet declared here.
             Leaflet leaflet = (Leaflet)Instantiate(items[1]);
             AddItem(leaflet);
         }

@@ -32,9 +32,10 @@ public class SaveManager : MonoBehaviour
 
             file.Close();
         }
-        catch (System.Exception)
+        catch (System.Exception e)
         {
             //delete savegame if corrupted
+            Debug.LogError(e.Message);
         }
     }
 
@@ -42,6 +43,7 @@ public class SaveManager : MonoBehaviour
     private void SavePlayer(SaveData data)
     {
         //creat the actual data to save ie vector3s, inventory, etc
+        //use the instances to store data.
         //data.MyPlayerData = new PlayerData(Player.MyInstance.MyLevel);
     }
 }

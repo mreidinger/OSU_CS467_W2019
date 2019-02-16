@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -23,8 +24,10 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
         }
     }
     
-
+    //probably need to save this
+    //used if want to stack items in one slot
     private Stack<Item> items = new Stack<Item>();
+
     [SerializeField]
     private Image icon;
 
@@ -61,6 +64,13 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
     //end interface
     public bool AddItem(Item item)
     {
+        //Debug.Log("AddItem called from SlotScript");
+        //Debug.Log(items.Count);
+        //use bag instance to add to array in bag object... TODO
+        //eg Bag.MyBagInstance.addItem(item);
+        //would allow for storage of item in bag parent
+        //this way, all slots would reference the same array.
+        //otherwise, all were saving are sprites and colors, and not an actual array
         items.Push(item);
         icon.sprite = item.MyIcon;
         icon.color = Color.white;
