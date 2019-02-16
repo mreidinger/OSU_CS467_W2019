@@ -8,15 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: c26159b600f588945848849e59c0d14b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene2.unity
     guid: 9aba5f2f2490bd24c91b0c02a2c85ec2
-  - enabled: 1
-    path: Assets/Scenes/OutsideHouse_Inventory_scene.unity
-    guid: 775990b4b3aac6841b0b851cf26f529d
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/OutsideHouse.unity
     guid: 99457eff9d2ddaf4299e71fc99f974df
@@ -65,4 +65,94 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndOfRainbow.unity
     guid: 5d8a23f122459b34b848a2c01f0983d5
+  - enabled: 1
+    path: Assets/Scenes/TrollRoom.unity
+    guid: 6bbfdb205e784c7409c9faf6e4f3b732
+  - enabled: 1
+    path: Assets/Scenes/EastofChasm.unity
+    guid: 8f3c842c0c3c9c14a8abea0cbb0408d8
+  - enabled: 1
+    path: Assets/Scenes/Gallery.unity
+    guid: e58d764b70b2f5f43ba5827870c017d7
+  - enabled: 1
+    path: Assets/Scenes/Studio.unity
+    guid: 5c559ad6f21a3014d9dcd23594ca60d1
+  - enabled: 1
+    path: Assets/Scenes/RoundRoom.unity
+    guid: 18f6ec3d531836d44825a8537e509ab8
+  - enabled: 1
+    path: Assets/Scenes/EastWestPassage.unity
+    guid: d34d4c0764899144aa277a0c3197391a
+  - enabled: 1
+    path: Assets/Scenes/NarrowPassage.unity
+    guid: fc78f30ac7817e34c92f5a519ddb16bd
+  - enabled: 1
+    path: Assets/Scenes/MirrorRoomS.unity
+    guid: 8408e50a3593ef0478d956a75e277acb
+  - enabled: 1
+    path: Assets/Scenes/WindingPassage.unity
+    guid: 4e51c6457e8fe23459211270a027d820
+  - enabled: 1
+    path: Assets/Scenes/Cave.unity
+    guid: 6c2e69d83653b1f4fa134b70e6a2f2c2
+  - enabled: 1
+    path: Assets/Scenes/EntranceToHades.unity
+    guid: 493d9ffb07667d54c9d85afe896e4d09
+  - enabled: 1
+    path: Assets/Scenes/LandOfTheDead.unity
+    guid: 93040f46054df524e89bfe345419dedf
+  - enabled: 1
+    path: Assets/Scenes/EngravingsCave.unity
+    guid: af81ee4cd5d78984e96a42118c770747
+  - enabled: 1
+    path: Assets/Scenes/DomeRoom.unity
+    guid: b9aef67c81e4b19468b6649a0f54dcf1
+  - enabled: 1
+    path: Assets/Scenes/TorchRoom.unity
+    guid: 2a69f44eb75324844acecbd9559d8718
+  - enabled: 1
+    path: Assets/Scenes/Temple.unity
+    guid: a2a2e402774dac644bdfb469e99bcad4
+  - enabled: 1
+    path: Assets/Scenes/EgyptianRoom.unity
+    guid: f93c7f7d675a8fd48aacc381a80597e0
+  - enabled: 1
+    path: Assets/Scenes/Altar.unity
+    guid: 0ed626fe927e01a4abac2c52bedcabc0
+  - enabled: 1
+    path: Assets/Scenes/LoudRoom.unity
+    guid: 014c13f5e4b932b43a9deea493042470
+  - enabled: 1
+    path: Assets/Scenes/DampCave.unity
+    guid: a3487f3201937744684f5abf0623cf5f
+  - enabled: 1
+    path: Assets/Scenes/WhiteCliffsBeachN.unity
+    guid: ffa8c3bdcd9389341b49aee6dc12a44d
+  - enabled: 1
+    path: Assets/Scenes/WhiteCliffsBeachS.unity
+    guid: 118ef6906d0d10e42af027a287dba3b2
+  - enabled: 1
+    path: Assets/Scenes/River3.unity
+    guid: 3de175aaf7cf8d24b89fcd90c3d2016e
+  - enabled: 1
+    path: Assets/Scenes/River4.unity
+    guid: b238d0d0580a89549b09f34b02d6e9dd
+  - enabled: 1
+    path: Assets/Scenes/SandyBeach.unity
+    guid: fac7cf25693e2f24aaa47487d21207cd
+  - enabled: 1
+    path: Assets/Scenes/SandyCave.unity
+    guid: ce3a579f381f83340a227486bd08f870
+  - enabled: 1
+    path: Assets/Scenes/Shore.unity
+    guid: 753598a46948a254c9e0461b0bd4eee8
+  - enabled: 1
+    path: Assets/Scenes/AragainFalls.unity
+    guid: 12110dbd617d0894c91cdc03a41c2b25
+  - enabled: 1
+    path: Assets/Scenes/OnTheRainbow.unity
+    guid: 7cd32c280a77aaf4796b10318eda04af
+  - enabled: 1
+    path: Assets/Scenes/River5.unity
+    guid: aa1cffe3ce5c2f3458f5934535ddc82d
   m_configObjects: {}
