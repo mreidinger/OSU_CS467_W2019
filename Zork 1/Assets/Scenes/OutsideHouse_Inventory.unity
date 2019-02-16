@@ -6248,7 +6248,7 @@ PrefabInstance:
     - target: {fileID: 8918558849495153581, guid: 858e8437c30cafa48bef5a680ff71ad7,
         type: 3}
       propertyPath: m_Name
-      value: Pickup
+      value: Leaflet
       objectReference: {fileID: 0}
     - target: {fileID: 8918558849495153580, guid: 858e8437c30cafa48bef5a680ff71ad7,
         type: 3}

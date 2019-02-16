@@ -17,7 +17,8 @@ public class SaveData
 [Serializable]
 public class PlayerData
 {
-    //put all game data in here
+    //put all game data in here.
+    //have values for vector3, scenename, etc
     public int MyLevel { get; set; }
 
     public PlayerData(int level)
