@@ -34,6 +34,7 @@ public class InventoryScript : MonoBehaviour
 
     private void Awake()
     {
+        Debug.Log("awake inventory called");
         Bag bag = (Bag)Instantiate(items[0]);
         bag.Initialize(16);
         bag.Use();
