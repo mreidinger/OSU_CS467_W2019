@@ -15,7 +15,7 @@ public class SaveManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //usekeycode to test
     }
 
     private void Save()
@@ -30,6 +30,8 @@ public class SaveManager : MonoBehaviour
 
             SavePlayer(data);
 
+            bf.Serialize(file, data);
+
             file.Close();
         }
         catch (System.Exception e)
@@ -39,11 +41,44 @@ public class SaveManager : MonoBehaviour
         }
     }
 
-    //set values in data to be saved with file pointer
+    //set values in data to be saved with file pointer.
+    //manipulates given data
     private void SavePlayer(SaveData data)
     {
         //creat the actual data to save ie vector3s, inventory, etc
         //use the instances to store data.
-        //data.MyPlayerData = new PlayerData(Player.MyInstance.MyLevel);
+        //has class called playerdata. store valuabble
+        
+    }
+
+    private void Load()
+    {
+        try
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+
+            FileStream file = File.Open(Application.persistentDataPath + "/" + "SaveTest.dat", FileMode.Open);
+
+            SaveData data = (SaveData)bf.Deserialize(file);
+
+            //LoadPlayer(data);
+
+            file.Close();
+
+            LoadPlayer(data);
+        }
+        catch (System.Exception e)
+        {
+            //delete savegame if corrupted
+            Debug.LogError(e.Message);
+        }
+    }
+
+    //set values in data to be saved with file pointer
+    private void LoadPlayer(SaveData data)
+    {
+        //set the gamevalues from deserialized values
+        //set gme values from saved valued
+
     }
 }

@@ -19,10 +19,12 @@ public class PlayerData
 {
     //put all game data in here.
     //have values for vector3, scenename, etc
-    public int MyLevel { get; set; }
-
+    /*public int MyLevel { get; set; }
+    //was just saving the characters level, not actual
+    //scene level!!
     public PlayerData(int level)
     {
         this.MyLevel = level;
     }
+    */
 }
