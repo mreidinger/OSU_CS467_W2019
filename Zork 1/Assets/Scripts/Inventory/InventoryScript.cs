@@ -59,6 +59,7 @@ public class InventoryScript : MonoBehaviour
             Leaflet leaflet = (Leaflet)Instantiate(items[1]);
             AddItem(leaflet);
         }
+        /*
         if (Input.GetKeyDown(KeyCode.K))
         {
             Bag bag = (Bag)Instantiate(items[0]);
@@ -66,6 +67,7 @@ public class InventoryScript : MonoBehaviour
             bag.Initialize(16);
             AddItem(bag);
         }
+        */
     }
     //end debuggging
 
