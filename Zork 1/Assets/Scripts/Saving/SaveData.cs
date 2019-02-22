@@ -28,10 +28,12 @@ public class PlayerData
         this.MyLevel = level;
     }
     */
-    public string ptag { get; set; }
-    public SerializableVector3 playerpos { get; set; }
+    public SerializableVector3 playerpos { get; set; } //within world
+    public string areaToLoad { get; set; }
+    public float dirX { get; set; } //direction
+    public float dirY { get; set; }
     //save transform values
-    public float posx { get; set; }
-    public float posy { get; set; }
-    public float posz { get; set; }
+    //public float posx { get; set; }
+    //public float posy { get; set; }
+    //public float posz { get; set; }
 }

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SaveManager : MonoBehaviour
 {
-    //public Vector3 target;
+    //public static int folderNameCount = 0;
+    //public string saveName;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,11 +32,15 @@ public class SaveManager : MonoBehaviour
 
     public void Save()
     {
+        ///USE THIS STRUCTURE WHEN SAVES ARE SELECTABLE ONLY!!
+        //saveName = "save";
+        ///////////////////////////////////////////////////////
         try
         {
+            //string fullSaveName = saveName + folderNameCount + ".dat";
             BinaryFormatter bf = new BinaryFormatter();
 
-            FileStream file = File.Open(Application.persistentDataPath + "/" + "TestSave1.dat", FileMode.OpenOrCreate);
+            FileStream file = File.Open(Application.persistentDataPath + "/" + "save0.dat" , FileMode.OpenOrCreate);
 
             SaveData data = new SaveData();
             Debug.Log("Before calling save()");
@@ -44,6 +50,9 @@ public class SaveManager : MonoBehaviour
             bf.Serialize(file, data);
 
             file.Close();
+            //int is not keeping its count between scene loads
+            //folderNameCount += 1;
+            
         }
         catch (System.Exception e)
         {
@@ -56,37 +65,30 @@ public class SaveManager : MonoBehaviour
     //manipulates given data
     public void SavePlayer(SaveData data)
     {
-        Debug.Log("In saveplayer, about to get transform");
-        //creat the actual data to save ie vector3s, inventory, etc
-        //use the instances to store data.
-        //has class called playerdata. store valuabble
-        //save transform values.... is null because player not instantiated yet???
-
         /////////////////////////////////////////////////////////////////////////////
         ///TODO: revamp inventory to store in some container for saving and loading
         ///or figure out how to save game objects
+        ///save player direction sprite.
         /////////////////////////////////////////////////////////////////////////////
-        Debug.Log("creating playerdata instane");
+
+        //creates the game object that will store the data.
+        //without new declaration, will receive errors.
         data.MyPlayerData = new PlayerData();
         Debug.Log("done creating instance");
-        string playerTag = PlayerController.instance.tag;
+        //save player direction
+        float posx = PlayerController.instance.myAnim.GetFloat("lastMoveX");
+        float posy = PlayerController.instance.myAnim.GetFloat("lastMoveY");
+        //save the current scene
+        Scene currScene = SceneManager.GetActiveScene();
+        string currSceneName = currScene.name;
+        //save the current player position in the world
         Vector3 temp = PlayerController.instance.transform.position;
         SerializableVector3 target = (SerializableVector3)(temp);
-        if (target.y == 0)
-        {
-            Debug.Log("target y is 0");
-        }
-        else
-        {
-            Debug.Log("target y is " + target.y);
-        }
-        Debug.Log("trying to get x y z : " + target.x);
-        Debug.Log("trying to save tag");
-        data.MyPlayerData.ptag = playerTag;
-        Debug.Log("finished saving tag");
+        //save the data
         data.MyPlayerData.playerpos = target;
-        Debug.Log("data stored");
-        Debug.Log("exiting saveplayer");
+        data.MyPlayerData.areaToLoad = currSceneName;
+        data.MyPlayerData.dirX = posx;
+        data.MyPlayerData.dirY = posy;
         
     }
 
@@ -95,8 +97,8 @@ public class SaveManager : MonoBehaviour
         try
         {
             BinaryFormatter bf = new BinaryFormatter();
-
-            FileStream file = File.Open(Application.persistentDataPath + "/" + "TestSave1.dat", FileMode.Open);
+            //restructure when saves become selectable
+            FileStream file = File.Open(Application.persistentDataPath + "/" + "save0.dat", FileMode.Open);
 
             SaveData data = (SaveData)bf.Deserialize(file);
 
@@ -116,11 +118,14 @@ public class SaveManager : MonoBehaviour
     //set values in data to be saved with file pointer
     public void LoadPlayer(SaveData data)
     {
-        //set the gamevalues from deserialized values
-        //set gme values from saved valued
-        Debug.Log("about to call loadplayer");
         SerializableVector3 oldData = data.MyPlayerData.playerpos;
+        string areaToLoad = data.MyPlayerData.areaToLoad;
+        //load saved scene, player world pos, and player direction.
+        //think about saving current scene name at start of file
+        //and doing a check to avoid unnecessary loading.
+        SceneManager.LoadScene(areaToLoad);
         PlayerController.instance.transform.position = (Vector3)oldData;
-        Debug.Log("after call to loadplayer");
+        PlayerController.instance.myAnim.SetFloat("lastMoveX", data.MyPlayerData.dirX);
+        PlayerController.instance.myAnim.SetFloat("lastMoveY", data.MyPlayerData.dirY);
     }
 }
