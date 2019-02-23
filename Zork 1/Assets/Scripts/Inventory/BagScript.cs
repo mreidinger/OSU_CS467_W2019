@@ -63,7 +63,7 @@ public class BagScript : MonoBehaviour
 
     public void OpenClose(Bag bag)
     {
-        //print("openclose called");
+        //Debug.Log("openclose called");
         canvasGroup.alpha = canvasGroup.alpha > 0 ? 0 : 1; //shown: 1, hidden: 0
         canvasGroup.blocksRaycasts = canvasGroup.blocksRaycasts == true ? false : true; //similar logic
         bag.Clicked = bag.Clicked == true ? false : true;

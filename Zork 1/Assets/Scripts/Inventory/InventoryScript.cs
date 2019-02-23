@@ -34,6 +34,7 @@ public class InventoryScript : MonoBehaviour
 
     private void Awake()
     {
+        Debug.Log("awake inventory called");
         Bag bag = (Bag)Instantiate(items[0]);
         bag.Initialize(16);
         bag.Use();
@@ -58,6 +59,7 @@ public class InventoryScript : MonoBehaviour
             Leaflet leaflet = (Leaflet)Instantiate(items[1]);
             AddItem(leaflet);
         }
+        /*
         if (Input.GetKeyDown(KeyCode.K))
         {
             Bag bag = (Bag)Instantiate(items[0]);
@@ -65,6 +67,7 @@ public class InventoryScript : MonoBehaviour
             bag.Initialize(16);
             AddItem(bag);
         }
+        */
     }
     //end debuggging
 

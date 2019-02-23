@@ -19,10 +19,21 @@ public class PlayerData
 {
     //put all game data in here.
     //have values for vector3, scenename, etc
-    public int MyLevel { get; set; }
 
+    /*public int MyLevel { get; set; }
+    //was just saving the characters level, not actual
+    //scene level!!
     public PlayerData(int level)
     {
         this.MyLevel = level;
     }
+    */
+    public SerializableVector3 playerpos { get; set; } //within world
+    public string areaToLoad { get; set; }
+    public float dirX { get; set; } //direction
+    public float dirY { get; set; }
+    //save transform values
+    //public float posx { get; set; }
+    //public float posy { get; set; }
+    //public float posz { get; set; }
 }
