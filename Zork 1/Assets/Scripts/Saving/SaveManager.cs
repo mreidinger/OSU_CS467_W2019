@@ -7,8 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class SaveManager : MonoBehaviour
 {
-    //public static int folderNameCount = 0;
-    //public string saveName;
+    //store all items for loading. search through array and create new item object as needed
+    [SerializeField]
+    private Item[] items; 
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +45,7 @@ public class SaveManager : MonoBehaviour
 
             SaveData data = new SaveData();
             Debug.Log("Before calling save()");
+            SaveBags(data);
             SavePlayer(data);
             Debug.Log("After calling save()");
 
@@ -63,6 +65,7 @@ public class SaveManager : MonoBehaviour
 
     //set values in data to be saved with file pointer.
     //manipulates given data
+    //only for player data
     public void SavePlayer(SaveData data)
     {
         /////////////////////////////////////////////////////////////////////////////
@@ -85,11 +88,24 @@ public class SaveManager : MonoBehaviour
         Vector3 temp = PlayerController.instance.transform.position;
         SerializableVector3 target = (SerializableVector3)(temp);
         //save the data
-        data.MyPlayerData.playerpos = target;
-        data.MyPlayerData.areaToLoad = currSceneName;
-        data.MyPlayerData.dirX = posx;
-        data.MyPlayerData.dirY = posy;
+        data.MyPlayerData.Playerpos = target;
+        data.MyPlayerData.AreaToLoad = currSceneName;
+        data.MyPlayerData.DirX = posx;
+        data.MyPlayerData.DirY = posy;
         
+    }
+
+    public void SaveBags(SaveData data)
+    {
+        //shouldnt do anything because set limit to one bag, but
+        //if we want to add more bags wed utilize this.
+        //mybagbutton and index not implemented
+        /*
+        for (int i = 1; i < InventoryScript.MyInstance.MyBags.Count; i++)
+        {
+            data.MyInventoryData.MyBags.Add(new BagData(InventoryScript.MyInstance.MyBags[i].MySlotCount, InventoryScript.MyInstance.MyBags[i].MyBagButton.MyBagIndex));
+        }
+        */
     }
 
     public void Load()
@@ -106,6 +122,8 @@ public class SaveManager : MonoBehaviour
 
             file.Close();
 
+            LoadBags(data);
+
             LoadPlayer(data);
         }
         catch (System.Exception e)
@@ -118,14 +136,26 @@ public class SaveManager : MonoBehaviour
     //set values in data to be saved with file pointer
     public void LoadPlayer(SaveData data)
     {
-        SerializableVector3 oldData = data.MyPlayerData.playerpos;
-        string areaToLoad = data.MyPlayerData.areaToLoad;
+        SerializableVector3 oldData = data.MyPlayerData.Playerpos;
+        string areaToLoad = data.MyPlayerData.AreaToLoad;
         //load saved scene, player world pos, and player direction.
         //think about saving current scene name at start of file
         //and doing a check to avoid unnecessary loading.
         SceneManager.LoadScene(areaToLoad);
         PlayerController.instance.transform.position = (Vector3)oldData;
-        PlayerController.instance.myAnim.SetFloat("lastMoveX", data.MyPlayerData.dirX);
-        PlayerController.instance.myAnim.SetFloat("lastMoveY", data.MyPlayerData.dirY);
+        PlayerController.instance.myAnim.SetFloat("lastMoveX", data.MyPlayerData.DirX);
+        PlayerController.instance.myAnim.SetFloat("lastMoveY", data.MyPlayerData.DirY);
+    }
+
+    //always have one bag. loads empty bags. need another fcn to load 
+    //items
+    public void LoadBags(SaveData data)
+    {
+        foreach (BagData bagData in data.MyInventoryData.MyBags)
+        {
+            Bag newBag = (Bag)Instantiate(items[0]);
+            newBag.Initialize(bagData.MySlotCount);
+            InventoryScript.MyInstance.AddBag(newBag);
+        }
     }
 }

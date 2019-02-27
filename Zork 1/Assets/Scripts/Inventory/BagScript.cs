@@ -20,8 +20,8 @@ public class BagScript : MonoBehaviour
             return instance;
         }
     }
-    
 
+    public List<SlotScript> MySlots { get => slots; set => slots = value; }
 
     [SerializeField]
     private GameObject slotPrefab;
@@ -42,19 +42,21 @@ public class BagScript : MonoBehaviour
         for (int i = 0; i < slotCount; i++)
         {
             SlotScript slot = Instantiate(slotPrefab, transform).GetComponent<SlotScript>(); //slotprefab child of current bagscipt's transform
-            slots.Add(slot);
+            slot.MyIndex = i; //used to save items
+            slot.MyBag = this;
+            MySlots.Add(slot);
         }
     }
 
     public bool AddItem(Item item)
     {
         //look for an empty slot and put item
-        foreach(SlotScript slot in slots)
+        foreach(SlotScript slot in MySlots)
         {
             if (slot.IsEmpty)
             {
                 slot.AddItem(item);
-                Debug.Log(slots.Count);
+                Debug.Log(MySlots.Count);
                 return true;
             }
         }

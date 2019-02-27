@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
 {
     //maybe not needed
-    
+
     private static SlotScript instance;
 
     public static SlotScript MyInstance
@@ -23,7 +23,7 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
             return instance;
         }
     }
-    
+
     //probably need to save this
     //used if want to stack items in one slot
     private Stack<Item> items = new Stack<Item>();
@@ -31,11 +31,16 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
     [SerializeField]
     private Image icon;
 
+    //added refernce to bagscript slot belongs to
+    public BagScript MyBag {get; set;}
+
+    public int MyIndex { get; set; }
+
     public bool IsEmpty
     {
         get
         {
-            return items.Count == 0;
+            return MyItems.Count == 0;
         }
     }
 
@@ -45,7 +50,7 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
         {
             if (!IsEmpty)
             {
-                return items.Peek();
+                return MyItems.Peek();
             }
             return null;
         }
@@ -59,8 +64,10 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
 
     public int MyCount
     {
-        get => items.Count;
+        get => MyItems.Count;
     }
+    public Stack<Item> MyItems { get => items; set => items = value; }
+
     //end interface
     public bool AddItem(Item item)
     {
@@ -71,7 +78,7 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
         //would allow for storage of item in bag parent
         //this way, all slots would reference the same array.
         //otherwise, all were saving are sprites and colors, and not an actual array
-        items.Push(item);
+        MyItems.Push(item);
         icon.sprite = item.MyIcon;
         icon.color = Color.white;
         item.MySlot = this;
@@ -82,7 +89,7 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
     {
         if(!IsEmpty)
         {
-            items.Pop();
+            MyItems.Pop();
             //look for video to make MyInstance
             UIManager.MyInstance.UpdateStackSize(this);
         }
