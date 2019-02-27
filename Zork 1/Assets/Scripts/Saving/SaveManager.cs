@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -46,6 +47,7 @@ public class SaveManager : MonoBehaviour
             SaveData data = new SaveData();
             Debug.Log("Before calling save()");
             SaveBags(data);
+            SaveInventory(data);
             SavePlayer(data);
             Debug.Log("After calling save()");
 
@@ -107,6 +109,17 @@ public class SaveManager : MonoBehaviour
         }
         */
     }
+    
+    public void SaveInventory(SaveData data)
+    {
+        //get all current slots with items
+        List<SlotScript> slots = InventoryScript.MyInstance.GetAllItems();
+        foreach (SlotScript slot in slots)
+        {
+            data.MyInventoryData.MyItems.Add(new ItemData(slot.MyItem.MyTitle, slot.MySlotIndex));
+        }
+    }
+    
 
     public void Load()
     {
@@ -123,6 +136,8 @@ public class SaveManager : MonoBehaviour
             file.Close();
 
             LoadBags(data);
+
+            LoadInventory(data);
 
             LoadPlayer(data);
         }
@@ -156,6 +171,20 @@ public class SaveManager : MonoBehaviour
             Bag newBag = (Bag)Instantiate(items[0]);
             newBag.Initialize(bagData.MySlotCount);
             InventoryScript.MyInstance.AddBag(newBag);
+        }
+    }
+
+    public void LoadInventory(SaveData data)
+    {
+        foreach (ItemData itemData in data.MyInventoryData.MyItems)
+        {
+            //searches debug items array, instantiated in unity view
+            Item item = Array.Find(items, x=> x.MyTitle == itemData.MyTitle);
+
+            for (int i = 0; i < 16; i++) //itemData.MyStackCount
+            {
+                InventoryScript.MyInstance.PlaceInSpecific(item, itemData.MySlotIdx, itemData.MyBagIdx);
+            }
         }
     }
 }

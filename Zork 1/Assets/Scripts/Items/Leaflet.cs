@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName  ="leaflet",menuName ="Items/Leaflet", order =1)]
+[CreateAssetMenu(fileName  ="leaflet",menuName ="Items/Leaflet", order =2)]
 public class Leaflet : Item, IUseable
 {
     public void Use()

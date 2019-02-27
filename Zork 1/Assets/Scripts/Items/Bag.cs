@@ -41,6 +41,7 @@ public class Bag : Item, IUseable
             MyBagScript.AddSlots(slots);
             InventoryScript.MyInstance.AddBag(this);
         }
+        //MyBagScript.MyBagIndex = MyBagButton.MyBagIndex; wont use b/c only one bag
     }
 
     //without this get empty bag. for load

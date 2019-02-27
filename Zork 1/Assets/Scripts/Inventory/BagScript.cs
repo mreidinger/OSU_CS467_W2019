@@ -30,6 +30,7 @@ public class BagScript : MonoBehaviour
 
     private List<SlotScript> slots = new List<SlotScript>();
 
+    public int MyBagIndex { get; set; }
 
     private void Awake()
     {
@@ -42,7 +43,7 @@ public class BagScript : MonoBehaviour
         for (int i = 0; i < slotCount; i++)
         {
             SlotScript slot = Instantiate(slotPrefab, transform).GetComponent<SlotScript>(); //slotprefab child of current bagscipt's transform
-            slot.MyIndex = i; //used to save items
+            slot.MySlotIndex = i; //used to save items
             slot.MyBag = this;
             MySlots.Add(slot);
         }

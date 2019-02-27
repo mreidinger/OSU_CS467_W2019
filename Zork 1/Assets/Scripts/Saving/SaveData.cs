@@ -46,16 +46,28 @@ public class ItemData
 {
     public string MyTitle { get; set; }
     public int MySlotIdx { get; set; }
+    public int MyBagIdx { get; set; }
+
+    public ItemData(string title, int idx = 0, int bagIdx = 0)
+    {
+        MyTitle = title;
+        MySlotIdx = idx;
+        MyBagIdx = bagIdx;
+    }
 }
 
 [Serializable]
 public class InventoryData
 {
     public List<BagData> MyBags { get; set; }
+
+    public List<ItemData> MyItems { get; set; }
+
     //want to see if constructors ease workload
     public InventoryData()
     {
         MyBags = new List<BagData>();
+        MyItems = new List<ItemData>();
     }
 }
 

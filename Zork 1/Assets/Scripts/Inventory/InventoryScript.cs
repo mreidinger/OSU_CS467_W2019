@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
+public delegate void ItemCountChanged(Item item);
+
 public class InventoryScript : MonoBehaviour
 {
+    public event ItemCountChanged itemCountChangedEvent;
+
     private static InventoryScript instance;
 
     public static InventoryScript MyInstance
@@ -40,7 +43,10 @@ public class InventoryScript : MonoBehaviour
         get { return MyBags.Count < 1; }
     }
 
-    public List<Bag> MyBags { get => bags;}
+    public List<Bag> MyBags
+    {
+        get => bags;
+    }
 
     //refactor
     /*
@@ -177,5 +183,27 @@ public class InventoryScript : MonoBehaviour
         MyBags.Add(bag);
         bag.MyBagButton = bagButtons[bagIndex];
         bagButtons[bagIndex].MyBag = bag;
+    }
+
+    public void PlaceInSpecific(Item item, int slotidx, int bagidx)
+    {
+        bags[bagidx].MyBagScript.MySlots[slotidx].AddItem(item);
+    }
+
+    public List<SlotScript> GetAllItems()
+    {
+        List<SlotScript> slots = new List<SlotScript>();
+        foreach(Bag bag in MyBags)
+        {
+            foreach(SlotScript slot in bag.MyBagScript.MySlots)
+            {
+                //look for a slot thats no empty and add
+                if (!slot.IsEmpty)
+                {
+                    slots.Add(slot);
+                }
+            }
+        }
+        return slots;
     }
 }

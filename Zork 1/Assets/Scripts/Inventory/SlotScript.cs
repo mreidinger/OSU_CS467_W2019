@@ -34,7 +34,7 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
     //added refernce to bagscript slot belongs to
     public BagScript MyBag {get; set;}
 
-    public int MyIndex { get; set; }
+    public int MySlotIndex { get; set; }
 
     public bool IsEmpty
     {
