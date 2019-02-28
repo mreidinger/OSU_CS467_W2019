@@ -8,9 +8,12 @@ public class SaveData
 {
     public PlayerData MyPlayerData { get; set; }
 
+    public InventoryData MyInventoryData { get; set; }
+
     public SaveData()
     {
         //constructor, setsup game
+        MyInventoryData = new InventoryData();
     }
 }
 
@@ -28,12 +31,56 @@ public class PlayerData
         this.MyLevel = level;
     }
     */
-    public SerializableVector3 playerpos { get; set; } //within world
-    public string areaToLoad { get; set; }
-    public float dirX { get; set; } //direction
-    public float dirY { get; set; }
+    public SerializableVector3 Playerpos { get; set; } //within world
+    public string AreaToLoad { get; set; }
+    public float DirX { get; set; } //direction
+    public float DirY { get; set; }
     //save transform values
     //public float posx { get; set; }
     //public float posy { get; set; }
     //public float posz { get; set; }
+}
+
+[Serializable]
+public class ItemData
+{
+    public string MyTitle { get; set; }
+    public int MySlotIdx { get; set; }
+    public int MyBagIdx { get; set; }
+
+    public ItemData(string title, int idx = 0, int bagIdx = 0)
+    {
+        MyTitle = title;
+        MySlotIdx = idx;
+        MyBagIdx = bagIdx;
+    }
+}
+
+[Serializable]
+public class InventoryData
+{
+    public List<BagData> MyBags { get; set; }
+
+    public List<ItemData> MyItems { get; set; }
+
+    //want to see if constructors ease workload
+    public InventoryData()
+    {
+        MyBags = new List<BagData>();
+        MyItems = new List<ItemData>();
+    }
+}
+
+[Serializable]
+public class BagData
+{
+    public int MySlotCount { get; set; } //curr at 16 slots per
+    public int MyBagIdx { get; set; }
+
+    //try with constructor
+    public BagData(int count, int idx)
+    {
+        MySlotCount = count;
+        MyBagIdx = idx;
+    }
 }
