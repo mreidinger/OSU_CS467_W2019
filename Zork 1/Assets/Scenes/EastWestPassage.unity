@@ -462,6 +462,107 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d01fc82745f93c746830a6794c9362ae, type: 3}
+--- !u!1001 &528107299
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 970952005499345453, guid: d01fc82745f93c746830a6794c9362ae,
+        type: 3}
+      propertyPath: m_Name
+      value: Area Exit - Chasm
+      objectReference: {fileID: 0}
+    - target: {fileID: 970952005499345450, guid: d01fc82745f93c746830a6794c9362ae,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 970952005499345450, guid: d01fc82745f93c746830a6794c9362ae,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 970952005499345450, guid: d01fc82745f93c746830a6794c9362ae,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.26258835
+      objectReference: {fileID: 0}
+    - target: {fileID: 970952005499345450, guid: d01fc82745f93c746830a6794c9362ae,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 970952005499345450, guid: d01fc82745f93c746830a6794c9362ae,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 970952005499345450, guid: d01fc82745f93c746830a6794c9362ae,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 970952005499345450, guid: d01fc82745f93c746830a6794c9362ae,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 970952005499345450, guid: d01fc82745f93c746830a6794c9362ae,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 970952005499345450, guid: d01fc82745f93c746830a6794c9362ae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 970952005499345450, guid: d01fc82745f93c746830a6794c9362ae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 970952005499345450, guid: d01fc82745f93c746830a6794c9362ae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 970952005499345450, guid: d01fc82745f93c746830a6794c9362ae,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 970952005499345450, guid: d01fc82745f93c746830a6794c9362ae,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 970952005499345452, guid: d01fc82745f93c746830a6794c9362ae,
+        type: 3}
+      propertyPath: areaToLoad
+      value: Chasm
+      objectReference: {fileID: 0}
+    - target: {fileID: 970952005499345452, guid: d01fc82745f93c746830a6794c9362ae,
+        type: 3}
+      propertyPath: areaTransitinName
+      value: EastWest-N
+      objectReference: {fileID: 0}
+    - target: {fileID: 1282560636, guid: d01fc82745f93c746830a6794c9362ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1282560636, guid: d01fc82745f93c746830a6794c9362ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 1282560635, guid: d01fc82745f93c746830a6794c9362ae, type: 3}
+      propertyPath: transitionName
+      value: Chasm - SW
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d01fc82745f93c746830a6794c9362ae, type: 3}
 --- !u!1 &1610682373
 GameObject:
   m_ObjectHideFlags: 0

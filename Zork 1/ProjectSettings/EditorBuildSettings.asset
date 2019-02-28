@@ -155,4 +155,112 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/River5.unity
     guid: aa1cffe3ce5c2f3458f5934535ddc82d
+  - enabled: 1
+    path: Assets/Scenes/NorthSouthPassage.unity
+    guid: 454ca06e9a8453a4aa45ec7d87cf3175
+  - enabled: 1
+    path: Assets/Scenes/Chasm.unity
+    guid: fb01afa7761fbc0489fc3c1909ea936a
+  - enabled: 1
+    path: Assets/Scenes/DeepCanyon.unity
+    guid: 2403e8f1588c25b48a45783ebbcca2ba
+  - enabled: 1
+    path: Assets/Scenes/Dam.unity
+    guid: 549b0103a23dfe44cb054638c6d68b3a
+  - enabled: 1
+    path: Assets/Scenes/DamLobby.unity
+    guid: 628e20cf90ca3ad4082a0d983312f889
+  - enabled: 1
+    path: Assets/Scenes/MxRoom.unity
+    guid: d0302646f9cd01644b1569feb5a4f8f0
+  - enabled: 1
+    path: Assets/Scenes/River2.unity
+    guid: a7bd4ea91658c55409678d1bd5ee0415
+  - enabled: 1
+    path: Assets/Scenes/River1.unity
+    guid: fb7ef572ce49e204785310476e21fc31
+  - enabled: 1
+    path: Assets/Scenes/DamBase.unity
+    guid: 667bb3d7e83c5ce4a953eca130a6a3e5
+  - enabled: 1
+    path: Assets/Scenes/ResSouth.unity
+    guid: 18913ac0f88ccab4eb1cb03052b455d2
+  - enabled: 1
+    path: Assets/Scenes/StreamView.unity
+    guid: d8643919e9e545d48b271dc3d7849c7c
+  - enabled: 1
+    path: Assets/Scenes/Stream.unity
+    guid: 733a26b73859abf46a4ba02b8c2d38f2
+  - enabled: 1
+    path: Assets/Scenes/Res.unity
+    guid: 5c54b15dff943e04c91daf8a9bc3344e
+  - enabled: 1
+    path: Assets/Scenes/Maze1.unity
+    guid: 8d1c6adaeb26dc14385f5357c740594c
+  - enabled: 1
+    path: Assets/Scenes/Maze2.unity
+    guid: 063dbdf61debb0e4ca4ce09a2a09d622
+  - enabled: 1
+    path: Assets/Scenes/Maze3.unity
+    guid: e4346a1605777a4468ecdc8fcd4228e7
+  - enabled: 1
+    path: Assets/Scenes/Maze4.unity
+    guid: cadd61f14f7cc2849ac6fae03809d95e
+  - enabled: 1
+    path: Assets/Scenes/DeadEndTop.unity
+    guid: 3f25d089f1083ba42acacaee78eed6e2
+  - enabled: 1
+    path: Assets/Scenes/Maze5.unity
+    guid: 82dd5263412446243983036a81fb3c12
+  - enabled: 1
+    path: Assets/Scenes/DeadEndMid.unity
+    guid: 83c11b9a7851b764bb92c5c19b8a2a1a
+  - enabled: 1
+    path: Assets/Scenes/Maze6.unity
+    guid: 6f0255ae4b11a04479e5bad48062c412
+  - enabled: 1
+    path: Assets/Scenes/Maze7.unity
+    guid: 709b72379c3d46d4fb2863362497eb29
+  - enabled: 1
+    path: Assets/Scenes/Maze8.unity
+    guid: be1f5eff26de9f54bba608c57d976e98
+  - enabled: 1
+    path: Assets/Scenes/DeadEndBottomRight.unity
+    guid: 32bbe431538aed043b35e8fb90c13cfc
+  - enabled: 1
+    path: Assets/Scenes/Maze9.unity
+    guid: 243cc2d082c244b458de38f599423ee8
+  - enabled: 1
+    path: Assets/Scenes/Maze10.unity
+    guid: c030336e7aee4a34b806295a6722ed6a
+  - enabled: 1
+    path: Assets/Scenes/Maze11.unity
+    guid: b33f36542be35294799494f62e04f7e5
+  - enabled: 1
+    path: Assets/Scenes/GratingRoom.unity
+    guid: bb1c008f339a112409e518160ef19cae
+  - enabled: 1
+    path: Assets/Scenes/Maze12.unity
+    guid: c343110d80bd0394681c2afac2a427c6
+  - enabled: 1
+    path: Assets/Scenes/DeadEndBottomLeft.unity
+    guid: 135e0508058547a4bba0f7eb9fb83507
+  - enabled: 1
+    path: Assets/Scenes/Maze13.unity
+    guid: c727951e1887c334b96a68914aacb4e7
+  - enabled: 1
+    path: Assets/Scenes/Maze14.unity
+    guid: ee699ae90c98fe24caa62b7504934747
+  - enabled: 1
+    path: Assets/Scenes/Maze15.unity
+    guid: f5fe0c3a2de3d5b4286e542403200742
+  - enabled: 1
+    path: Assets/Scenes/CyclopsRoom.unity
+    guid: 4447b95209bf3b540870b89b0fe7ab79
+  - enabled: 1
+    path: Assets/Scenes/TreasureRoom.unity
+    guid: ba30294405457794d93f632236570de1
+  - enabled: 1
+    path: Assets/Scenes/StrangePassage.unity
+    guid: 0e82699ac33ea9148a61af4f6890a425
   m_configObjects: {}
