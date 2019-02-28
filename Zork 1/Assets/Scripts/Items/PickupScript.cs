@@ -15,7 +15,7 @@ public class PickupScript : MonoBehaviour
             //check for each item available and add.
             //there must be a more efficient way, but I haven't
             //thought of it.
-            //print("Colliding");
+            //need to check inventory is not full
             if (itemType == "Leaflet")
             {
                 Leaflet leaflet = (Leaflet)Instantiate(InventoryScript.MyInstance.items[1]);

@@ -12,6 +12,9 @@ public abstract class Item : ScriptableObject
 
     private SlotScript slot;
 
+    [SerializeField]
+    private string title;
+
     public Sprite MyIcon
     {
         get => icon;
@@ -24,6 +27,16 @@ public abstract class Item : ScriptableObject
     {
         get => slot;
         set => slot = value;
+    }
+    public string MyTitle
+    {
+        get => title;
+        set => title = value;
+    }
+
+    public string GetDescription()
+    {
+        return MyTitle;
     }
 
     public void Remove()
