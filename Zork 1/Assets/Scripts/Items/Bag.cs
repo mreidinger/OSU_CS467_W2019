@@ -14,7 +14,7 @@ public class Bag : Item, IUseable
     private BagButton bagButton;
 
     [SerializeField]
-    private GameObject bagPrefab; //access the prefab
+    private GameObject bagPrefab; //access the prefab, needed to instantiate more bags
 
     public BagScript MyBagScript { get; set; }
     public int MySlotCount { get => slots; }
