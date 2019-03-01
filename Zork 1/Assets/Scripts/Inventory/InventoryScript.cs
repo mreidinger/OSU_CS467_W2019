@@ -40,7 +40,7 @@ public class InventoryScript : MonoBehaviour
 
     public bool CanAddBag
     {  
-        get { return MyBags.Count < 1; }
+        get { return bags.Count < 1; }
     }
 
     public List<Bag> MyBags
