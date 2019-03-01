@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class CanvasScript : MonoBehaviour
 {
-    public static CanvasScript instance;
+    public static CanvasScript MyCanvasInstance;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (instance == null)
+        if (MyCanvasInstance == null)
         {
-            instance = this;
+            MyCanvasInstance = this;
         }
         else
         {
