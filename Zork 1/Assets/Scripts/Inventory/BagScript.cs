@@ -61,6 +61,7 @@ public class BagScript : MonoBehaviour
                 return true;
             }
         }
+        Debug.Log("Inventory full!");
         return false;
     }
 
