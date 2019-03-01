@@ -8,9 +8,30 @@ using UnityEngine.SceneManagement;
 
 public class SaveManager : MonoBehaviour
 {
+    private static SaveManager instance;
+
+
+
     //store all items for loading. search through array and create new item object as needed
     [SerializeField]
-    private Item[] items; 
+    private Item[] items;
+
+    public static SaveManager MySaveInstance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<SaveManager>();
+            }
+            return instance;
+        }
+        set
+        {
+            instance = value;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {

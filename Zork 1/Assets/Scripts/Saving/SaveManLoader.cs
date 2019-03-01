@@ -2,21 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Managers : MonoBehaviour
+public class SaveManLoader : MonoBehaviour
 {
-    public static Managers instance;
+    public GameObject saveManager;
     // Start is called before the first frame update
     void Start()
     {
-        if (instance == null)
+        if (SaveManager.MySaveInstance == null)
         {
-            instance = this;
+            Instantiate(saveManager);
         }
-        else
-        {
-            Destroy(gameObject);
-        }
-        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
