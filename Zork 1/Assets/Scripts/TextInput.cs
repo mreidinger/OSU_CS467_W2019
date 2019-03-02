@@ -13,10 +13,13 @@ public class TextInput : MonoBehaviour
 	{
 		controller = GetComponent<GameController>();
 		inputField.onEndEdit.AddListener(AcceptStringInput);
+		
 	}
 
 	void AcceptStringInput(string userInput)
 	{
+		if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
+        {
 		userInput = userInput.ToLower();
 		controller.LogStringWithReturn(userInput);
 
@@ -33,12 +36,17 @@ public class TextInput : MonoBehaviour
 		}
 
 		InputComplete();
-
+		}
+		else
+		{
+			inputField.Select();
+			inputField.ActivateInputField();
+		}
 	}
 
 	void InputComplete()
 	{
-		controller.DisplayLoggedText();
+	//	controller.DisplayLoggedText();
 		inputField.ActivateInputField();
 		inputField.text = null;
 	}
