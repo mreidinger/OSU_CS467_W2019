@@ -20,8 +20,8 @@ public class BagScript : MonoBehaviour
             return instance;
         }
     }
-    
 
+    public List<SlotScript> MySlots { get => slots; set => slots = value; }
 
     [SerializeField]
     private GameObject slotPrefab;
@@ -30,6 +30,7 @@ public class BagScript : MonoBehaviour
 
     private List<SlotScript> slots = new List<SlotScript>();
 
+    public int MyBagIndex { get; set; }
 
     private void Awake()
     {
@@ -42,27 +43,31 @@ public class BagScript : MonoBehaviour
         for (int i = 0; i < slotCount; i++)
         {
             SlotScript slot = Instantiate(slotPrefab, transform).GetComponent<SlotScript>(); //slotprefab child of current bagscipt's transform
-            slots.Add(slot);
+            slot.MySlotIndex = i; //used to save items
+            slot.MyBag = this;
+            MySlots.Add(slot);
         }
     }
 
     public bool AddItem(Item item)
     {
         //look for an empty slot and put item
-        foreach(SlotScript slot in slots)
+        foreach(SlotScript slot in MySlots)
         {
             if (slot.IsEmpty)
             {
                 slot.AddItem(item);
+                Debug.Log(MySlots.Count);
                 return true;
             }
         }
+        Debug.Log("Inventory full!");
         return false;
     }
 
     public void OpenClose(Bag bag)
     {
-        //print("openclose called");
+        //Debug.Log("openclose called");
         canvasGroup.alpha = canvasGroup.alpha > 0 ? 0 : 1; //shown: 1, hidden: 0
         canvasGroup.blocksRaycasts = canvasGroup.blocksRaycasts == true ? false : true; //similar logic
         bag.Clicked = bag.Clicked == true ? false : true;

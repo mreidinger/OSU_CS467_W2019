@@ -37,6 +37,7 @@ public class BagButton : MonoBehaviour, IPointerClickHandler
     //click to open and close inventory
     public void OnPointerClick(PointerEventData eventData)
     {
+        //Debug.Log("clicked");
         if (bag != null)
         {
             if (bag.Clicked)

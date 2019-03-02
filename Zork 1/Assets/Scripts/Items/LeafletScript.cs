@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LeafletScript : MonoBehaviour
 {
+    /*Obsolete, using pickup script*/
     //can make a prefab, with itemtype as a fillin,
     //then do a switch statement to add the right type?
     //private string itemType = "Leaflet";

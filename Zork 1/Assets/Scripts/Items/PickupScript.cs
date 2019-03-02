@@ -15,12 +15,20 @@ public class PickupScript : MonoBehaviour
             //check for each item available and add.
             //there must be a more efficient way, but I haven't
             //thought of it.
-            //print("Colliding");
+            //need to check inventory is not full
+            //need to check if inventory is full to not destroy onscreen
+            //object
             if (itemType == "Leaflet")
             {
                 Leaflet leaflet = (Leaflet)Instantiate(InventoryScript.MyInstance.items[1]);
                 InventoryScript.MyInstance.AddItem(leaflet);
             }
+            else if (itemType == "Egg")
+            {
+                Egg egg = (Egg)Instantiate(InventoryScript.MyInstance.items[2]);
+                InventoryScript.MyInstance.AddItem(egg);
+            }
+
             //continue with other objects, sword, sack etc...
             //remove item from world... destroy script?
             Destroy(gameObject);
