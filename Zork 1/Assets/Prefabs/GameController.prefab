@@ -52,8 +52,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4197d0a51e47eef4e8af207858e89949, type: 2}
   - {fileID: 11400000, guid: 5a75e1da2e0fb3143a58069b2f77c3e2, type: 2}
   - {fileID: 11400000, guid: 1aea8758188611a42bb25b57739632c2, type: 2}
+  - {fileID: 11400000, guid: b69f61fd50394034e89d4d4359c9ba1d, type: 2}
+  areaText: []
   dialogBox: {fileID: 0}
+  textInput: {fileID: 0}
   dialogueToggle: 0
+  roomToggle: 0
+  roomTextSelector: 0
+  myScrollRect: {fileID: 0}
+  newScrollBar: {fileID: 0}
   interactionDescriptionsInRoom: []
 --- !u!114 &6498435677749476672
 MonoBehaviour:
