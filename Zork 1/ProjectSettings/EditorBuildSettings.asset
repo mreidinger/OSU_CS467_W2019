@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: c26159b600f588945848849e59c0d14b
-  - enabled: 1
     path: Assets/Scenes/SampleScene2.unity
     guid: 9aba5f2f2490bd24c91b0c02a2c85ec2
   - enabled: 0
@@ -263,4 +260,76 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StrangePassage.unity
     guid: 0e82699ac33ea9148a61af4f6890a425
+  - enabled: 1
+    path: Assets/Scenes/ResNorth.unity
+    guid: 0d32a5b58fba47243a7f0ea120b03caf
+  - enabled: 1
+    path: Assets/Scenes/AtlantisRoom.unity
+    guid: c19fd9852021e444da19a5b19900276b
+  - enabled: 1
+    path: Assets/Scenes/CaveNorth.unity
+    guid: 49ede879df9fcce45b16a1cf26a622b2
+  - enabled: 1
+    path: Assets/Scenes/TwistingPassage.unity
+    guid: 7e4ac1932c2b5284fb2d4e96c6075587
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: c26159b600f588945848849e59c0d14b
+  - enabled: 1
+    path: Assets/Scenes/MirrorRoomN.unity
+    guid: 84cbd93754bc60b41a13ca38a23f4c1c
+  - enabled: 1
+    path: Assets/Scenes/ColdPassage.unity
+    guid: b4908ac707583ae4a84ddba45965de42
+  - enabled: 1
+    path: Assets/Scenes/SlideRoom.unity
+    guid: 36b59ab7ddb095548b6b7939e9ba78e9
+  - enabled: 1
+    path: Assets/Scenes/MineEntrance.unity
+    guid: dbc6d6d158495b849a648a02e15b2ea2
+  - enabled: 1
+    path: Assets/Scenes/SqueakyRoom.unity
+    guid: 974fdaa79a7696944860a7e56d864311
+  - enabled: 1
+    path: Assets/Scenes/BatRoom.unity
+    guid: f93530e44acc1d541996a8153f4703ed
+  - enabled: 1
+    path: Assets/Scenes/ShaftRoom.unity
+    guid: 163925c955895f74d88200506ab368c0
+  - enabled: 1
+    path: Assets/Scenes/SmellyRoom.unity
+    guid: 1f558d86a67039f49b879de5eeea23b4
+  - enabled: 1
+    path: Assets/Scenes/GasRoom.unity
+    guid: 83d277e078d9980428a1b3d820cd92d6
+  - enabled: 1
+    path: Assets/Scenes/CoalMine1.unity
+    guid: 517557a1e606db04bba5d01c4973babf
+  - enabled: 1
+    path: Assets/Scenes/CoalMine2.unity
+    guid: f589a4948c53d2044800960760f51468
+  - enabled: 1
+    path: Assets/Scenes/CoalMine3.unity
+    guid: 31dc7d23c12801642b6805330c752dcb
+  - enabled: 1
+    path: Assets/Scenes/CoalMine4.unity
+    guid: 26694a88dbcd3414c9f99c827478e54d
+  - enabled: 1
+    path: Assets/Scenes/LadderTop.unity
+    guid: 8bb0826c597865b48a68aeab11857791
+  - enabled: 1
+    path: Assets/Scenes/LadderBottom.unity
+    guid: 955fc8f92f0897c4ca4351d7db22c0c3
+  - enabled: 1
+    path: Assets/Scenes/MineDeadEnd.unity
+    guid: e1b32020260e32444a45bc4fa8049d39
+  - enabled: 1
+    path: Assets/Scenes/TimberRoom.unity
+    guid: 9d4eeabf1cdfcd44eb46e341c09ec062
+  - enabled: 1
+    path: Assets/Scenes/DraftyRoom.unity
+    guid: 0fd2db82d8310604ab0b8211a43fab68
+  - enabled: 1
+    path: Assets/Scenes/MachineRoom.unity
+    guid: e8a908fbab0c2fa4e8ff94d684886df0
   m_configObjects: {}
