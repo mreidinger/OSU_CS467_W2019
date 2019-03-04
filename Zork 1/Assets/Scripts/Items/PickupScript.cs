@@ -45,6 +45,23 @@ public class PickupScript : MonoBehaviour
                 AirPump ap = (AirPump)Instantiate(InventoryScript.MyInstance.items[5]);
                 InventoryScript.MyInstance.AddItem(ap);
             }
+            else if (itemType == "Bar")
+            {
+                PlatinumBar bar = (PlatinumBar)Instantiate(InventoryScript.MyInstance.items[6]);
+                InventoryScript.MyInstance.AddItem(bar);
+            }
+            else if (itemType == "Knife")
+            {
+                Knife knife = (Knife)Instantiate(InventoryScript.MyInstance.items[7]);
+                InventoryScript.MyInstance.AddItem(knife);
+            }
+            else if (itemType == "Rope")
+            {
+                Rope rope = (Rope)Instantiate(InventoryScript.MyInstance.items[8]);
+                InventoryScript.MyInstance.AddItem(rope);
+            }
+
+
 
             
 
