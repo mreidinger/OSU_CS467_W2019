@@ -13,11 +13,13 @@ public class PickupScript : MonoBehaviour
         if (other.tag == "Player")
         {
             //check for each item available and add.
-            //there must be a more efficient way, but I haven't
-            //thought of it.
+            //itemtype references the item array found under the inventoryScript
+            //gameobject.
+            //NOTE
             //need to check inventory is not full
             //need to check if inventory is full to not destroy onscreen
             //object
+            //END NOTE
             if (itemType == "Leaflet")
             {
                 Leaflet leaflet = (Leaflet)Instantiate(InventoryScript.MyInstance.items[1]);
@@ -33,6 +35,18 @@ public class PickupScript : MonoBehaviour
                 Sword sword = (Sword)Instantiate(InventoryScript.MyInstance.items[3]);
                 InventoryScript.MyInstance.AddItem(sword);
             }
+            else if (itemType == "Trident")
+            {
+                Trident trident = (Trident)Instantiate(InventoryScript.MyInstance.items[4]);
+                InventoryScript.MyInstance.AddItem(trident);
+            }
+            else if (itemType == "Airpump")
+            {
+                AirPump ap = (AirPump)Instantiate(InventoryScript.MyInstance.items[5]);
+                InventoryScript.MyInstance.AddItem(ap);
+            }
+
+            
 
             //continue with other objects, sword, sack etc...
             //remove item from world... destroy script?
