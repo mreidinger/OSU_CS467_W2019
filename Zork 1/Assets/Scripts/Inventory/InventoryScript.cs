@@ -114,7 +114,7 @@ public class InventoryScript : MonoBehaviour
     {
         if(CanAddBag)
         {
-            Debug.Log("awake inventory called");
+           // Debug.Log("awake inventory called");
             Bag bag = (Bag)Instantiate(items[0]);
             bag.Initialize(16);
             bag.Use();

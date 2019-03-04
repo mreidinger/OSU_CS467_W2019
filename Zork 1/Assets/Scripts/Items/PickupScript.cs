@@ -28,6 +28,11 @@ public class PickupScript : MonoBehaviour
                 Egg egg = (Egg)Instantiate(InventoryScript.MyInstance.items[2]);
                 InventoryScript.MyInstance.AddItem(egg);
             }
+            else if (itemType == "Sword")
+            {
+                Sword sword = (Sword)Instantiate(InventoryScript.MyInstance.items[3]);
+                InventoryScript.MyInstance.AddItem(sword);
+            }
 
             //continue with other objects, sword, sack etc...
             //remove item from world... destroy script?
