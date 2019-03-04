@@ -60,6 +60,11 @@ public class PickupScript : MonoBehaviour
                 Rope rope = (Rope)Instantiate(InventoryScript.MyInstance.items[8]);
                 InventoryScript.MyInstance.AddItem(rope);
             }
+            else if (itemType == "Skull")
+            {
+                Skull skull = (Skull)Instantiate(InventoryScript.MyInstance.items[9]);
+                InventoryScript.MyInstance.AddItem(skull);
+            }
 
 
 
