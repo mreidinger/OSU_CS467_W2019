@@ -90,6 +90,12 @@ public class PickupScript : MonoBehaviour
                 BlkBook book = (BlkBook)Instantiate(InventoryScript.MyInstance.items[14]);
                 InventoryScript.MyInstance.AddItem(book);
             }
+            else if (itemType == "PlasticPile")
+            {
+                PlasticPile plastic = (PlasticPile)Instantiate(InventoryScript.MyInstance.items[15]);
+                InventoryScript.MyInstance.AddItem(plastic);
+            }
+
 
 
 
