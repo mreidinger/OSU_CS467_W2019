@@ -80,6 +80,18 @@ public class PickupScript : MonoBehaviour
                 Bottle bottle = (Bottle)Instantiate(InventoryScript.MyInstance.items[12]);
                 InventoryScript.MyInstance.AddItem(bottle);
             }
+            else if (itemType == "Candle")
+            {
+                Candle candle = (Candle)Instantiate(InventoryScript.MyInstance.items[13]);
+                InventoryScript.MyInstance.AddItem(candle);
+            }
+            else if (itemType == "BlackBook")
+            {
+                BlkBook book = (BlkBook)Instantiate(InventoryScript.MyInstance.items[14]);
+                InventoryScript.MyInstance.AddItem(book);
+            }
+
+
 
 
 
