@@ -65,6 +65,22 @@ public class PickupScript : MonoBehaviour
                 Skull skull = (Skull)Instantiate(InventoryScript.MyInstance.items[9]);
                 InventoryScript.MyInstance.AddItem(skull);
             }
+            else if (itemType == "Sack")
+            {
+                Sack sack = (Sack)Instantiate(InventoryScript.MyInstance.items[10]);
+                InventoryScript.MyInstance.AddItem(sack);
+            }
+            else if (itemType == "Lantern")
+            {
+                Lantern lantern = (Lantern)Instantiate(InventoryScript.MyInstance.items[11]);
+                InventoryScript.MyInstance.AddItem(lantern);
+            }
+            else if (itemType == "Bottle")
+            {
+                Bottle bottle = (Bottle)Instantiate(InventoryScript.MyInstance.items[12]);
+                InventoryScript.MyInstance.AddItem(bottle);
+            }
+
 
 
 
