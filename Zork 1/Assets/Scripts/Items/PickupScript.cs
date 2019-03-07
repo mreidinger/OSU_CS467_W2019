@@ -115,6 +115,34 @@ public class PickupScript : MonoBehaviour
                 PotOfGold gold = (PotOfGold)Instantiate(InventoryScript.MyInstance.items[19]);
                 InventoryScript.MyInstance.AddItem(gold);
             }
+            else if (itemType == "Bracelet")
+            {
+                Bracelet bracelet = (Bracelet)Instantiate(InventoryScript.MyInstance.items[20]);
+                InventoryScript.MyInstance.AddItem(bracelet);
+            }
+            else if (itemType == "Coal")
+            {
+                Coal coal = (Coal)Instantiate(InventoryScript.MyInstance.items[21]);
+                InventoryScript.MyInstance.AddItem(coal);
+            }
+            else if (itemType == "Figurine")
+            {
+                Figurine fig = (Figurine)Instantiate(InventoryScript.MyInstance.items[22]);
+                InventoryScript.MyInstance.AddItem(fig);
+            }
+            else if (itemType == "Diamond")
+            {
+                Diamond diamond = (Diamond)Instantiate(InventoryScript.MyInstance.items[23]);
+                InventoryScript.MyInstance.AddItem(diamond);
+            }
+            else if (itemType == "Torch")
+            {
+                Torch torch = (Torch)Instantiate(InventoryScript.MyInstance.items[24]);
+                InventoryScript.MyInstance.AddItem(torch);
+            }
+
+
+
 
 
 
