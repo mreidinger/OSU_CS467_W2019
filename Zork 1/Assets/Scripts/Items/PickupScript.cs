@@ -95,15 +95,17 @@ public class PickupScript : MonoBehaviour
                 PlasticPile plastic = (PlasticPile)Instantiate(InventoryScript.MyInstance.items[15]);
                 InventoryScript.MyInstance.AddItem(plastic);
             }
-
-
-
-
-
-
-
-            
-
+            else if (itemType == "Buoy")
+            {
+                Buoy buoy = (Buoy)Instantiate(InventoryScript.MyInstance.items[16]);
+                InventoryScript.MyInstance.AddItem(buoy);
+            }
+            else if (itemType == "Shovel")
+            {
+                Shovel shovel = (Shovel)Instantiate(InventoryScript.MyInstance.items[17]);
+                InventoryScript.MyInstance.AddItem(shovel);
+            }
+                                                                        
             //continue with other objects, sword, sack etc...
             //remove item from world... destroy script?
             Destroy(gameObject);
