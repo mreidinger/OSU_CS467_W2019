@@ -105,9 +105,23 @@ public class PickupScript : MonoBehaviour
                 Shovel shovel = (Shovel)Instantiate(InventoryScript.MyInstance.items[17]);
                 InventoryScript.MyInstance.AddItem(shovel);
             }
+            else if (itemType == "Scarab")
+            {
+                Scarab scarab = (Scarab)Instantiate(InventoryScript.MyInstance.items[18]);
+                InventoryScript.MyInstance.AddItem(scarab);
+            }
+            else if (itemType == "PotOfGold")
+            {
+                PotOfGold gold = (PotOfGold)Instantiate(InventoryScript.MyInstance.items[19]);
+                InventoryScript.MyInstance.AddItem(gold);
+            }
+
+
+
                                                                         
-            //continue with other objects, sword, sack etc...
-            //remove item from world... destroy script?
+            //should wrap items in if statement checking if the bag
+            //is not full else we display some msg informing user bags 
+            //full
             Destroy(gameObject);
         }
         
