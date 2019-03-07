@@ -57,7 +57,7 @@ public class BagScript : MonoBehaviour
             if (slot.IsEmpty)
             {
                 slot.AddItem(item);
-                Debug.Log(MySlots.Count);
+                //Debug.Log(MySlots.Count);
                 return true;
             }
         }
