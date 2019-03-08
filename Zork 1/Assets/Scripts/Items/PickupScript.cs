@@ -155,6 +155,21 @@ public class PickupScript : MonoBehaviour
                 Matches matches = (Matches)Instantiate(InventoryScript.MyInstance.items[27]);
                 InventoryScript.MyInstance.AddItem(matches);
             }
+            else if (itemType == "Wrench")
+            {
+                Wrench wrench = (Wrench)Instantiate(InventoryScript.MyInstance.items[28]);
+                InventoryScript.MyInstance.AddItem(wrench);
+            }
+            else if (itemType == "Screwdriver")
+            {
+                Screwdriver sd = (Screwdriver)Instantiate(InventoryScript.MyInstance.items[29]);
+                InventoryScript.MyInstance.AddItem(sd);
+            }
+            else if (itemType == "Jewels")
+            {
+                Jewels jewels = (Jewels)Instantiate(InventoryScript.MyInstance.items[30]);
+                InventoryScript.MyInstance.AddItem(jewels);
+            }
 
 
 
