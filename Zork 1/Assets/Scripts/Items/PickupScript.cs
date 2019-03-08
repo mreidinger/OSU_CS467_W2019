@@ -140,6 +140,21 @@ public class PickupScript : MonoBehaviour
                 Torch torch = (Torch)Instantiate(InventoryScript.MyInstance.items[24]);
                 InventoryScript.MyInstance.AddItem(torch);
             }
+            else if (itemType == "Coins")
+            {
+                Coins coins = (Coins)Instantiate(InventoryScript.MyInstance.items[25]);
+                InventoryScript.MyInstance.AddItem(coins);
+            }
+            else if (itemType == "Key")
+            {
+                Key key = (Key)Instantiate(InventoryScript.MyInstance.items[26]);
+                InventoryScript.MyInstance.AddItem(key);
+            }
+            else if (itemType == "Matches")
+            {
+                Matches matches = (Matches)Instantiate(InventoryScript.MyInstance.items[27]);
+                InventoryScript.MyInstance.AddItem(matches);
+            }
 
 
 
