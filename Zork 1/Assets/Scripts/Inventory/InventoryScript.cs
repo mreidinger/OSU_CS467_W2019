@@ -49,7 +49,7 @@ public class InventoryScript : MonoBehaviour
     }
 
     //refactor
-    /*
+   
     public int MyEmptySlotCount
     {
         get
@@ -65,7 +65,7 @@ public class InventoryScript : MonoBehaviour
         //set;
     }
     
-
+    /*
     public int MyTotalSlotCount
     {
         get
