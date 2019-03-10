@@ -106,6 +106,21 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b0c5b1637edab794094fa2f16245ccfb, type: 2}
   - {fileID: 11400000, guid: 0bb439c38b2f4bc438f106d6232e4c02, type: 2}
   - {fileID: 11400000, guid: f0a30455e3cc8b74ab87aefa35a240db, type: 2}
+  - {fileID: 11400000, guid: eb944e4248b7f02469d33bb232f6af98, type: 2}
+  - {fileID: 11400000, guid: 96cad7716426ffe468826cc622ad4296, type: 2}
+  - {fileID: 11400000, guid: 1255e7e45aaba774eb307de195123f18, type: 2}
+  - {fileID: 11400000, guid: 78545b8a12cf3f24e9e474bb36bdce2d, type: 2}
+  - {fileID: 11400000, guid: 3fc9e43bba03ded4fbe4257b7fe5637c, type: 2}
+  - {fileID: 11400000, guid: f543038117e3a1c46b06e6bf3dcb1ede, type: 2}
+  - {fileID: 11400000, guid: 46355dd6541a78e4f8807a6b0a98c23a, type: 2}
+  - {fileID: 11400000, guid: 9aa02f181dda9b948b09d11ef2e2064d, type: 2}
+  - {fileID: 11400000, guid: 896cfa9f51bdfdf4bbf1dc72aed50329, type: 2}
+  - {fileID: 11400000, guid: f05cc3abfe96c3b4493e41ab6f042edb, type: 2}
+  - {fileID: 11400000, guid: 3a2995da6b3dad442a818a971f4eb887, type: 2}
+  - {fileID: 11400000, guid: f2ac5471bbba56240af31eb5d8ba29cf, type: 2}
+  - {fileID: 11400000, guid: 4cb6fd458a304bc47b8ea6afea53f83c, type: 2}
+  - {fileID: 11400000, guid: ea457afb2793620488b3cb87601296a5, type: 2}
+  - {fileID: 11400000, guid: 25038ff5555290342913fa34d279be91, type: 2}
 --- !u!1 &1097429926436037114
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,10 +284,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
