@@ -57,13 +57,45 @@ public class BagScript : MonoBehaviour
             if (slot.IsEmpty)
             {
                 slot.AddItem(item);
-                Debug.Log(MySlots.Count);
+                //Debug.Log(MySlots.Count);
                 return true;
             }
         }
         Debug.Log("Inventory full!");
         return false;
     }
+    /*
+    public int MyEmptySlotCount()
+    {
+        int emptySlots = 0;
+        foreach (SlotScript slot in MySlots)
+        {
+            if (slot.IsEmpty)
+            {
+                emptySlots++;
+            }
+        }
+        Debug.Log(emptySlots);
+        return emptySlots;
+    }
+    */
+    public int MyEmptySlotCount
+    {
+        get
+        {
+            int emptySlots = 0;
+            foreach (SlotScript slot in MySlots)
+            {
+                if (slot.IsEmpty)
+                {
+                    emptySlots++;
+                }
+            }
+            Debug.Log(emptySlots);
+            return emptySlots;
+        }
+    }
+
 
     public void OpenClose(Bag bag)
     {

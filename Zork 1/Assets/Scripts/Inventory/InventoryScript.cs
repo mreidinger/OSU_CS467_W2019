@@ -49,7 +49,7 @@ public class InventoryScript : MonoBehaviour
     }
 
     //refactor
-    /*
+   
     public int MyEmptySlotCount
     {
         get
@@ -65,7 +65,7 @@ public class InventoryScript : MonoBehaviour
         //set;
     }
     
-
+    /*
     public int MyTotalSlotCount
     {
         get
@@ -114,7 +114,7 @@ public class InventoryScript : MonoBehaviour
     {
         if(CanAddBag)
         {
-            Debug.Log("awake inventory called");
+           // Debug.Log("awake inventory called");
             Bag bag = (Bag)Instantiate(items[0]);
             bag.Initialize(16);
             bag.Use();
