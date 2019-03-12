@@ -10,8 +10,6 @@ public class SaveManager : MonoBehaviour
 {
     private static SaveManager instance;
 
-
-
     //store all items for loading. search through array and create new item object as needed
     [SerializeField]
     private Item[] items;
@@ -77,7 +75,7 @@ public class SaveManager : MonoBehaviour
             file.Close();
             //int is not keeping its count between scene loads
             //folderNameCount += 1;
-            
+
         }
         catch (System.Exception e)
         {
@@ -91,11 +89,6 @@ public class SaveManager : MonoBehaviour
     //only for player data
     public void SavePlayer(SaveData data)
     {
-        /////////////////////////////////////////////////////////////////////////////
-        ///TODO: revamp inventory to store in some container for saving and loading
-        ///or figure out how to save game objects
-        ///save player direction sprite.
-        /////////////////////////////////////////////////////////////////////////////
 
         //creates the game object that will store the data.
         //without new declaration, will receive errors.
@@ -208,4 +201,5 @@ public class SaveManager : MonoBehaviour
             }
         }
     }
+
 }
