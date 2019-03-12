@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +13,13 @@ public class PlayerController : MonoBehaviour
      public static PlayerController instance;
 
      public string areaTransitionName;
+
+     public string mainMenuScene;
+
+     //currently unused, if we want to save upon exiting to main menu add above load Main Menu
+     public SaveManager SaveToMain;
+
+     public 
 
      // Start is called before the first frame update
     void Start()
@@ -41,6 +49,15 @@ public class PlayerController : MonoBehaviour
          {
                myAnim.SetFloat("lastMoveX", Input.GetAxisRaw("Horizontal"));
                myAnim.SetFloat("lastMoveY", Input.GetAxisRaw("Vertical"));
+         }
+
+         // check for escape when not in CLI
+         else if (Input.GetKeyDown("escape"))
+         {
+              // add save here if we want to save everytime we exit to main
+              // not enabled currently so saving in a conscious player effort
+              // also this way we don't save over something without player knowledge
+              SceneManager.LoadScene(mainMenuScene);
          }
 
     }

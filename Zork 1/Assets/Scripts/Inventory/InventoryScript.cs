@@ -49,7 +49,7 @@ public class InventoryScript : MonoBehaviour
     }
 
     //refactor
-    /*
+   
     public int MyEmptySlotCount
     {
         get
@@ -65,7 +65,7 @@ public class InventoryScript : MonoBehaviour
         //set;
     }
     
-
+    /*
     public int MyTotalSlotCount
     {
         get
@@ -114,7 +114,7 @@ public class InventoryScript : MonoBehaviour
     {
         if(CanAddBag)
         {
-            Debug.Log("awake inventory called");
+           // Debug.Log("awake inventory called");
             Bag bag = (Bag)Instantiate(items[0]);
             bag.Initialize(16);
             bag.Use();
@@ -126,13 +126,14 @@ public class InventoryScript : MonoBehaviour
     //debug
     private void Update()
     {
+        /*
         if (Input.GetKeyDown(KeyCode.L))
         {
             //could I call this on collision?
             /*
             Bag bag = (Bag)Instantiate(items[0]);
             bag.Initialize(16);
-            bag.Use();*/
+            bag.Use();*\/
             //instantiate uses the specified array to make a copy
             //of the object specified.
             //scene view shows weve stored a leaflet item at pos
@@ -146,7 +147,7 @@ public class InventoryScript : MonoBehaviour
             /*
             Bag bag = (Bag)Instantiate(items[0]);
             bag.Initialize(16);
-            bag.Use();*/
+            bag.Use();*\/
             //instantiate uses the specified array to make a copy
             //of the object specified.
             //scene view shows weve stored a leaflet item at pos
@@ -154,6 +155,15 @@ public class InventoryScript : MonoBehaviour
             Egg egg = (Egg)Instantiate(items[2]);
             AddItem(egg);
         }
+        */
+        //test to see if can close bag so I can know if
+        //bag is not working or just not receiving input
+        /*
+        else if (Input.GetKeyDown(KeyCode.X))
+        {
+            MyBags[0].MyBagScript.OpenClose(MyBags[0]);
+        }
+        */
     }
     //end debuggging
 
