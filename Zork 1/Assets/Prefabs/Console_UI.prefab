@@ -33,10 +33,10 @@ RectTransform:
   m_Father: {fileID: 7302191688982587029}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0065994, y: -0.0081978}
-  m_SizeDelta: {x: 533.2, y: 177.91}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.006591797, y: -0.00024414062}
+  m_SizeDelta: {x: -0.8, y: -0.00048828}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2622808606071334473
 MonoBehaviour:
@@ -140,10 +140,10 @@ RectTransform:
   m_Father: {fileID: 4086816522565615286}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 256.6, y: 0.024515}
-  m_SizeDelta: {x: 20, y: 177.96}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 256.6, y: 0.024749756}
+  m_SizeDelta: {x: -512, y: 0.0495}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4609099714853070650
 CanvasRenderer:
@@ -221,8 +221,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8796120413235767315}
   m_HandleRect: {fileID: 2983686744207260973}
   m_Direction: 2
-  m_Value: 0.9998151
-  m_Size: 0.39667782
+  m_Value: 0.99999785
+  m_Size: 0.86209923
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -787,10 +787,10 @@ RectTransform:
   m_Father: {fileID: 4086816522565615286}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 256.59998, y: -224.2}
-  m_SizeDelta: {x: 513.2, y: 448.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -17.599976, y: -19.549953}
+  m_SizeDelta: {x: -35.2, y: 39.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7302191689838860558
 CanvasRenderer:
@@ -1036,6 +1036,9 @@ MonoBehaviour:
   roomTextSelector: 0
   myScrollRect: {fileID: 2622808606071334473}
   newScrollBar: {fileID: 586925476915583381}
+  battle: {fileID: 0}
+  UI_Console: {fileID: 7302191689538304041}
+  UI_Toggle: 1
   interactionDescriptionsInRoom: []
 --- !u!114 &7302191690490760782
 MonoBehaviour:
