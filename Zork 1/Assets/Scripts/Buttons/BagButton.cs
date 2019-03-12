@@ -20,6 +20,10 @@ public class BagButton : MonoBehaviour, IPointerClickHandler
         }
     }
     */
+    //private void Start()
+    //{
+    //    Debug.Log("bag button init");
+    //}
 
     private Bag bag;
 

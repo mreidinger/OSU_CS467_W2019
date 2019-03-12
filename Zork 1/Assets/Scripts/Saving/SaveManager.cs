@@ -89,11 +89,6 @@ public class SaveManager : MonoBehaviour
     //only for player data
     public void SavePlayer(SaveData data)
     {
-        /////////////////////////////////////////////////////////////////////////////
-        ///TODO: revamp inventory to store in some container for saving and loading
-        ///or figure out how to save game objects
-        ///save player direction sprite.
-        /////////////////////////////////////////////////////////////////////////////
 
         //creates the game object that will store the data.
         //without new declaration, will receive errors.
