@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8051289294656792845}
   - component: {fileID: 8051289294656792834}
   - component: {fileID: 8051289294656792847}
+  - component: {fileID: 6729046815139710227}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -136,6 +137,8 @@ MonoBehaviour:
   theRB: {fileID: 8051289294656792845}
   myAnim: {fileID: 8051289294656792847}
   areaTransitionName: 
+  mainMenuScene: ZorkMainMenu
+  SaveToMain: {fileID: 6729046815139710227}
 --- !u!95 &8051289294656792847
 Animator:
   serializedVersion: 3
@@ -155,3 +158,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6729046815139710227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8051289294656792833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5fc8aba609f8a44a442a1f3421179c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []
