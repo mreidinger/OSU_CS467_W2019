@@ -91,7 +91,7 @@ public class BagScript : MonoBehaviour
                     emptySlots++;
                 }
             }
-            Debug.Log(emptySlots);
+            //Debug.Log(emptySlots);
             return emptySlots;
         }
     }
