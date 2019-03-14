@@ -10,8 +10,6 @@ public class SaveManager : MonoBehaviour
 {
     private static SaveManager instance;
 
-
-
     //store all items for loading. search through array and create new item object as needed
     [SerializeField]
     private Item[] items;
@@ -77,7 +75,7 @@ public class SaveManager : MonoBehaviour
             file.Close();
             //int is not keeping its count between scene loads
             //folderNameCount += 1;
-            
+
         }
         catch (System.Exception e)
         {
@@ -203,4 +201,5 @@ public class SaveManager : MonoBehaviour
             }
         }
     }
+
 }
