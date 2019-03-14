@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
      public string newGameScene;
+
+     public SaveManager loadSave;
      
      // Start is called before the first frame update
      void Start()
@@ -21,7 +23,7 @@ public class MainMenu : MonoBehaviour
 
      public void Continue()
      {
-
+          loadSave.Load();
      }
 
      public void NewGame()
@@ -31,6 +33,7 @@ public class MainMenu : MonoBehaviour
 
      public void Exit()
      {
+          // currently not saving on exit qsCD
           Application.Quit();
      }
 }

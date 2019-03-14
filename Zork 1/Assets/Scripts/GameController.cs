@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
 	public int roomTextSelector = 0;
 	public ScrollRect myScrollRect;
 	public Scrollbar newScrollBar;
+	public GameObject UI_Console;
 
 	//[HideInInspector]
 	//public RoomNavigation roomNavigation;
@@ -71,13 +72,30 @@ public class GameController : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (dialogBox.activeInHierarchy)
-		{
 
-//			if (dialogueToggle == 0)
-//			{
-//				dialogBox.SetActive(false);
-//			}
+		if (Input.GetKey(KeyCode.Minus))
+		{
+			UI_Console.SetActive(false);
+		}
+
+		if (Input.GetKey(KeyCode.Equals))
+		{
+			UI_Console.SetActive(true);
+			textInput.Select();
+		}
+		if (Input.GetKey(KeyCode.Minus))
+		{
+			UI_Console.SetActive(false);
+		}
+
+		if (Input.GetKey(KeyCode.Equals))
+		{
+			UI_Console.SetActive(true);
+			textInput.Select();
+		}
+
+		if (dialogBox.activeInHierarchy)
+		{		
 
 			if (Input.GetKey("up") || Input.GetKey("down") || Input.GetKey("left") || Input.GetKey("right"))
 			{
