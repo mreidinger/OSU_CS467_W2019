@@ -30,15 +30,25 @@ public class CyclopsController : MonoBehaviour
      // Start is called before the first frame update
      void Start()
      {
-          cyclopsRB2D = GetComponent<Rigidbody2D>();
-          cyclopsDeath = false;
-          cyclopsHealth = 100;
-          //timeBetweenMoveCounter = timeToMove;
-          //timeToMoveCounter = timeToMove;
+          int cyclopsKills = PlayerPrefs.GetInt("cyclops_deaths", 15);
+          if (cyclopsKills == 0)
+          {
+               cyclopsRB2D = GetComponent<Rigidbody2D>();
+               cyclopsDeath = false;
+               cyclopsHealth = 100;
+               //timeBetweenMoveCounter = timeToMove;
+               //timeToMoveCounter = timeToMove;
 
-          timeBetweenMoveCounter = Random.Range(timeBetweenMove * 0.25f, timeBetweenMove * 1.75f);
-          timeToMoveCounter = Random.Range(timeToMove * .025f, timeToMove * 1.75f);
-          myCyclopsAnim.SetBool("cyclopsDeath", false);
+               timeBetweenMoveCounter = Random.Range(timeBetweenMove * 0.25f, timeBetweenMove * 1.75f);
+               timeToMoveCounter = Random.Range(timeToMove * .025f, timeToMove * 1.75f);
+               myCyclopsAnim.SetBool("cyclopsDeath", false);
+          }
+          else
+          {
+               cyclopsDeath = true;
+               cyclopsHealth = -50;
+               myCyclopsAnim.SetBool("cyclopsDeath", true);
+          }
 
      }
 
