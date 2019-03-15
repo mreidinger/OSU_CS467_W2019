@@ -198,7 +198,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Continue
+  m_Text: Continue/Load Saved Game
 --- !u!222 &234106187
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -529,7 +529,7 @@ RectTransform:
   m_Children:
   - {fileID: 1483150832}
   m_Father: {fileID: 1370030252}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -720,15 +720,15 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1952782558}
   - {fileID: 1054190512}
+  - {fileID: 1952782558}
   - {fileID: 1721722314}
   m_Father: {fileID: 1568845968}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 669, y: 108}
+  m_AnchoredPosition: {x: 580, y: 131}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1370030253
@@ -964,6 +964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newGameScene: OutsideHouse
+  loadSave: {fileID: 0}
 --- !u!114 &1568845970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1056,8 +1057,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1568845970}
-        m_MethodName: Load
+      - m_Target: {fileID: 1568845969}
+        m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1233,7 +1234,7 @@ RectTransform:
   m_Children:
   - {fileID: 234106184}
   m_Father: {fileID: 1370030252}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

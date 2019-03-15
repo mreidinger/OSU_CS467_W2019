@@ -30,15 +30,25 @@ public class TrollController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-         trollRB2D = GetComponent<Rigidbody2D>();
-         trollDeath = false;
-         trollHealth = 100;
-         //timeBetweenMoveCounter = timeToMove;
-         //timeToMoveCounter = timeToMove;
+         int trollKills = PlayerPrefs.GetInt("cyclops_deaths", 15);
+         if (trollKills == 0)
+         {
+              trollRB2D = GetComponent<Rigidbody2D>();
+              trollDeath = false;
+              trollHealth = 100;
+              //timeBetweenMoveCounter = timeToMove;
+              //timeToMoveCounter = timeToMove;
 
-         timeBetweenMoveCounter = Random.Range(timeBetweenMove * 0.25f, timeBetweenMove * 1.75f);
-         timeToMoveCounter = Random.Range(timeToMove * .025f, timeToMove * 1.75f);
-         myTrollAnim.SetBool("trollDeath", false);
+              timeBetweenMoveCounter = Random.Range(timeBetweenMove * 0.25f, timeBetweenMove * 1.75f);
+              timeToMoveCounter = Random.Range(timeToMove * .025f, timeToMove * 1.75f);
+              myTrollAnim.SetBool("trollDeath", false);
+         }
+         else
+         {
+              trollDeath = true;
+              trollHealth = -100;
+              myTrollAnim.SetBool("trollDeath", true);
+         }
 
      }
 
