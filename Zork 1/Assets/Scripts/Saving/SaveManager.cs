@@ -40,12 +40,12 @@ public class SaveManager : MonoBehaviour
     void Update()
     {
         //usekeycode to test
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.F1))
         {
             Save();
         }
         //usekeycode to test
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.F4))
         {
             Load();
         }
