@@ -41,15 +41,25 @@ public class BatController : MonoBehaviour
      // Start is called before the first frame update
      void Start()
      {
-          batRB2D = GetComponent<Rigidbody2D>();
-          batDeath = false;
-          batHealth = 100;
-          //timeBetweenMoveCounter = timeToMove;
-          //timeToMoveCounter = timeToMove;
+          int batKills = PlayerPrefs.GetInt("cyclops_deaths", 15);
+          if (batKills == 0)
+          {
+               batRB2D = GetComponent<Rigidbody2D>();
+               batDeath = false;
+               batHealth = 100;
+               //timeBetweenMoveCounter = timeToMove;
+               //timeToMoveCounter = timeToMove;
 
-          timeBetweenMoveCounter = Random.Range(timeBetweenMove * 0.25f, timeBetweenMove * 1.75f);
-          timeToMoveCounter = Random.Range(timeToMove * .025f, timeToMove * 1.75f);
-          myBatAnim.SetBool("batDeath", false);
+               timeBetweenMoveCounter = Random.Range(timeBetweenMove * 0.25f, timeBetweenMove * 1.75f);
+               timeToMoveCounter = Random.Range(timeToMove * .025f, timeToMove * 1.75f);
+               myBatAnim.SetBool("batDeath", false);
+          }
+          else
+          {
+               batDeath = true;
+               batHealth = -100;
+               myBatAnim.SetBool("batDeath", true);
+          }
 
      }
 
