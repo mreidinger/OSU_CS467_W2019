@@ -30333,6 +30333,57 @@ PrefabInstance:
       propertyPath: m_Name
       value: BattleManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2377173046958683781, guid: 8ff09c605128e19429cfbe00608b6d6d,
+        type: 3}
+      propertyPath: ConsoleUI
+      value: 
+      objectReference: {fileID: 1387677803}
+    - target: {fileID: 2377173046958683781, guid: 8ff09c605128e19429cfbe00608b6d6d,
+        type: 3}
+      propertyPath: enemyType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377173046958683781, guid: 8ff09c605128e19429cfbe00608b6d6d,
+        type: 3}
+      propertyPath: trollPresent
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377173046958683781, guid: 8ff09c605128e19429cfbe00608b6d6d,
+        type: 3}
+      propertyPath: cyclopsPresent
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377173046958683781, guid: 8ff09c605128e19429cfbe00608b6d6d,
+        type: 3}
+      propertyPath: movingEnemy
+      value: 
+      objectReference: {fileID: 2106482262}
+    - target: {fileID: 2377173046958683781, guid: 8ff09c605128e19429cfbe00608b6d6d,
+        type: 3}
+      propertyPath: theGameController
+      value: 
+      objectReference: {fileID: 2033447050}
+    - target: {fileID: 2377173046958683781, guid: 8ff09c605128e19429cfbe00608b6d6d,
+        type: 3}
+      propertyPath: textIn
+      value: 
+      objectReference: {fileID: 2052692066}
+    - target: {fileID: 2377173046958683781, guid: 8ff09c605128e19429cfbe00608b6d6d,
+        type: 3}
+      propertyPath: Troll
+      value: 
+      objectReference: {fileID: 1509449044463776740, guid: 0ed7e9cc60072d84faae8ab4c2dbb34c,
+        type: 3}
+    - target: {fileID: 2377173046958683781, guid: 8ff09c605128e19429cfbe00608b6d6d,
+        type: 3}
+      propertyPath: Cyclops
+      value: 
+      objectReference: {fileID: 2106482268}
+    - target: {fileID: 2377173047873836865, guid: 8ff09c605128e19429cfbe00608b6d6d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2377173046958683780, guid: 8ff09c605128e19429cfbe00608b6d6d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30387,57 +30438,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2377173046958683781, guid: 8ff09c605128e19429cfbe00608b6d6d,
-        type: 3}
-      propertyPath: ConsoleUI
-      value: 
-      objectReference: {fileID: 1387677803}
-    - target: {fileID: 2377173046958683781, guid: 8ff09c605128e19429cfbe00608b6d6d,
-        type: 3}
-      propertyPath: enemyType
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2377173046958683781, guid: 8ff09c605128e19429cfbe00608b6d6d,
-        type: 3}
-      propertyPath: trollPresent
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2377173046958683781, guid: 8ff09c605128e19429cfbe00608b6d6d,
-        type: 3}
-      propertyPath: cyclopsPresent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2377173046958683781, guid: 8ff09c605128e19429cfbe00608b6d6d,
-        type: 3}
-      propertyPath: movingEnemy
-      value: 
-      objectReference: {fileID: 2106482262}
-    - target: {fileID: 2377173046958683781, guid: 8ff09c605128e19429cfbe00608b6d6d,
-        type: 3}
-      propertyPath: theGameController
-      value: 
-      objectReference: {fileID: 2033447050}
-    - target: {fileID: 2377173046958683781, guid: 8ff09c605128e19429cfbe00608b6d6d,
-        type: 3}
-      propertyPath: textIn
-      value: 
-      objectReference: {fileID: 2052692066}
-    - target: {fileID: 2377173046958683781, guid: 8ff09c605128e19429cfbe00608b6d6d,
-        type: 3}
-      propertyPath: Troll
-      value: 
-      objectReference: {fileID: 1509449044463776740, guid: 0ed7e9cc60072d84faae8ab4c2dbb34c,
-        type: 3}
-    - target: {fileID: 2377173046958683781, guid: 8ff09c605128e19429cfbe00608b6d6d,
-        type: 3}
-      propertyPath: Cyclops
-      value: 
-      objectReference: {fileID: 2106482268}
-    - target: {fileID: 2377173047873836865, guid: 8ff09c605128e19429cfbe00608b6d6d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2377173047386336134, guid: 8ff09c605128e19429cfbe00608b6d6d,
         type: 3}

@@ -581,6 +581,11 @@ PrefabInstance:
       propertyPath: batPresent
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2377173046958683781, guid: 8ff09c605128e19429cfbe00608b6d6d,
+        type: 3}
+      propertyPath: CustomCam
+      value: 
+      objectReference: {fileID: 1546007725}
     - target: {fileID: 2377173047873836865, guid: 8ff09c605128e19429cfbe00608b6d6d,
         type: 3}
       propertyPath: m_IsActive
@@ -644,22 +649,22 @@ PrefabInstance:
     - target: {fileID: 2377173047386336134, guid: 8ff09c605128e19429cfbe00608b6d6d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.21
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 2377173047386336134, guid: 8ff09c605128e19429cfbe00608b6d6d,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.1604676
+      value: 2.0557709
       objectReference: {fileID: 0}
     - target: {fileID: 2377173047386336134, guid: 8ff09c605128e19429cfbe00608b6d6d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.45
+      value: -0.63
       objectReference: {fileID: 0}
     - target: {fileID: 2377173047386336134, guid: 8ff09c605128e19429cfbe00608b6d6d,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.01203
+      value: 1.9315218
       objectReference: {fileID: 0}
     - target: {fileID: 2377173047174548811, guid: 8ff09c605128e19429cfbe00608b6d6d,
         type: 3}
@@ -1057,6 +1062,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d01fc82745f93c746830a6794c9362ae, type: 3}
+--- !u!1 &1546007725 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8437384238014829253, guid: 0b47a2ee0abd7904e8cd407b612e575b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1896441484}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1575417570
 PrefabInstance:
   m_ObjectHideFlags: 0
