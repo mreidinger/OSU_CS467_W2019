@@ -60,7 +60,10 @@ public class SaveManager : MonoBehaviour
         {
             //string fullSaveName = saveName + folderNameCount + ".dat";
             BinaryFormatter bf = new BinaryFormatter();
-
+             if (File.Exists(Application.persistentDataPath + "/" + "save0.dat"))
+             {
+                  File.Delete(Application.persistentDataPath + "/" + "save0.dat");
+             }
             FileStream file = File.Open(Application.persistentDataPath + "/" + "save0.dat" , FileMode.OpenOrCreate);
 
             SaveData data = new SaveData();

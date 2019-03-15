@@ -54,9 +54,10 @@ public class PlayerController : MonoBehaviour
          // check for escape when not in CLI
          else if (Input.GetKeyDown("escape"))
          {
-              // add save here if we want to save everytime we exit to main
+              // add save here if we want to save every time we exit to main
               // not enabled currently so saving in a conscious player effort
               // also this way we don't save over something without player knowledge
+              SaveToMain.Save();
               SceneManager.LoadScene(mainMenuScene);
          }
 
