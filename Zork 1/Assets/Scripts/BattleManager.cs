@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class BattleManager : MonoBehaviour
 {
-
 	public static BattleManager instance;
 	public GameController theGameController;
 	public GameObject ConsoleUI;
@@ -83,7 +82,7 @@ public class BattleManager : MonoBehaviour
 				{
 					isActive = true;
 					PlayerController.instance.canMove = false;
-					transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.x, transform.position.z);
+					transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, transform.position.z);
 					ConsoleUI.SetActive(false);
 					battleScene.SetActive(true);
 					movingEnemy.SetActive(false);
@@ -111,7 +110,7 @@ public class BattleManager : MonoBehaviour
 				{
 					isActive = true;
 					PlayerController.instance.canMove = false;
-					transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.x, transform.position.z);
+					transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, transform.position.z);
 					ConsoleUI.SetActive(false);
 					battleScene.SetActive(true);
 					movingEnemy.SetActive(false);
@@ -139,7 +138,7 @@ public class BattleManager : MonoBehaviour
 				{
 					isActive = true;
 					PlayerController.instance.canMove = false;
-					transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.x, transform.position.z);
+					transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, transform.position.z);
 					ConsoleUI.SetActive(false);
 					battleScene.SetActive(true);
 					movingEnemy.SetActive(false);
