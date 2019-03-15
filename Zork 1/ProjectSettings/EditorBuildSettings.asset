@@ -335,16 +335,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MachineRoom.unity
     guid: e8a908fbab0c2fa4e8ff94d684886df0
-  - enabled: 1
-    path: Assets/Scenes/SandyBeach_Copy.unity
-    guid: a5e78cd9db39e994780b1449073cffba
-  - enabled: 1
-    path: Assets/Scenes/SandyCave_Copy.unity
-    guid: 5b84e1a562921b14d9e9adb4b7a586c6
-  - enabled: 1
-    path: Assets/Scenes/Shore_Copy.unity
-    guid: 337aa51ad2413694e8c24feb481177f6
-  - enabled: 1
-    path: Assets/Scenes/River4_Copy.unity
-    guid: dceee0c62cb03b74c9fe7a9a9c457f1d
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
